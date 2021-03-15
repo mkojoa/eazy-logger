@@ -32,7 +32,7 @@ simple-logging provides File Log and Seq Log options. See logging configuration 
  
 ```yaml
    "LoggerOptions": {
-    "applicationName": "demo-service",
+    "applicationName": "simple-logging-service",
     "excludePaths": [ "/ping", "/metrics" ],
     "level": "information",
     "file": {

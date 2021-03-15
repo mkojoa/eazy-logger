@@ -8,7 +8,9 @@ This library aims to provide easy way of logging in .netcore web application.
 
 ## Library dependencies
 - [X] [Serilog](#Serilog)
-- [X] [Microsoft.Extensions.Logging](#Microsoft.Extensions.Logging)
+- [X] [Microsoft.Extensions.Logging](#Microsoft.Extensions.Logging) 
+- [X] [Microsoft.Extensions](#Microsoft.Extensions) 
+- [X] [Microsoft.AspNetCore](#Microsoft.AspNetCore)
 
 
 ## Get Started

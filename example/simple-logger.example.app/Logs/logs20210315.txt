@@ -1,0 +1,33 @@
+2021-03-15 12:27:08.727 +01:00 [INF] Now listening on: http://localhost:5000
+2021-03-15 12:27:09.005 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-15 12:27:09.005 +01:00 [INF] Hosting environment: Development
+2021-03-15 12:27:09.005 +01:00 [INF] Content root path: C:\Users\MAmeyaw\RiderProjects\simple-logger\example\simple-logger.example.app
+2021-03-15 12:27:11.094 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2021-03-15 12:27:11.167 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 200 - text/html;charset=utf-8 74.2366ms
+2021-03-15 12:27:12.210 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js.map - -
+2021-03-15 12:27:12.229 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js.map - - - 404 0 - 19.3830ms
+2021-03-15 12:27:12.276 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js.map - -
+2021-03-15 12:27:12.277 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js.map - - - 404 0 - 0.7716ms
+2021-03-15 12:27:12.308 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - -
+2021-03-15 12:27:12.367 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 58.9027ms
+2021-03-15 12:33:46.806 +01:00 [INF] Now listening on: http://localhost:5000
+2021-03-15 12:33:46.874 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-03-15 12:33:46.874 +01:00 [INF] Hosting environment: Development
+2021-03-15 12:33:46.874 +01:00 [INF] Content root path: C:\Users\MAmeyaw\RiderProjects\simple-logger\example\simple-logger.example.app
+2021-03-15 12:33:48.726 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2021-03-15 12:33:48.847 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 200 - text/html;charset=utf-8 123.2629ms
+2021-03-15 12:33:50.990 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js.map - -
+2021-03-15 12:33:51.011 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js.map - - - 404 0 - 17.9944ms
+2021-03-15 12:33:51.060 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js.map - -
+2021-03-15 12:33:51.061 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js.map - - - 404 0 - 0.6911ms
+2021-03-15 12:33:51.092 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - -
+2021-03-15 12:33:51.150 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 57.9795ms
+2021-03-15 12:36:10.336 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/WeatherForecast - -
+2021-03-15 12:36:10.339 +01:00 [INF] Executing endpoint 'simple_logger.example.app.Controllers.WeatherForecastController.Get (simple-logger.example.app)'
+2021-03-15 12:36:10.376 +01:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[simple_logger.example.app.WeatherForecast] Get() on controller simple_logger.example.app.Controllers.WeatherForecastController (simple-logger.example.app).
+2021-03-15 12:36:10.526 +01:00 [INF] Executing action method simple_logger.example.app.Controllers.WeatherForecastController.Get (simple-logger.example.app) - Validation state: "Valid"
+2021-03-15 12:36:10.531 +01:00 [INF] Executed action method simple_logger.example.app.Controllers.WeatherForecastController.Get (simple-logger.example.app), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.804ms.
+2021-03-15 12:36:10.535 +01:00 [INF] Executing ObjectResult, writing value of type 'simple_logger.example.app.WeatherForecast[]'.
+2021-03-15 12:36:10.547 +01:00 [INF] Executed action simple_logger.example.app.Controllers.WeatherForecastController.Get (simple-logger.example.app) in 166.9944ms
+2021-03-15 12:36:10.547 +01:00 [INF] Executed endpoint 'simple_logger.example.app.Controllers.WeatherForecastController.Get (simple-logger.example.app)'
+2021-03-15 12:36:10.547 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/WeatherForecast - - - 200 - application/json;+charset=utf-8 210.8444ms

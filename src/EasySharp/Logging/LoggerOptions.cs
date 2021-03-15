@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Lunch.Extension.Logging.Options;
+using EasySharp.Logging.Options;
 
-namespace Lunch.Extension.Logging
+namespace EasySharp.Logging
 {
     public class LoggerOptions
     {

@@ -1,4 +1,4 @@
-using Lunch.Extension.Logging;
+using EasySharp.Logging;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -19,7 +19,7 @@ namespace simple_logger.example.app
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-            .UseEasyCloudLogging()
+            .UseSimpleLogging() 
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();

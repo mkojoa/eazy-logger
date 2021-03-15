@@ -1,4 +1,4 @@
-﻿namespace Lunch.Extension.Logging.Options
+﻿namespace EasySharp.Logging.Options
 {
     public class SeqOptions
     {

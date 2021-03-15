@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Lunch.Extension.Logging.Options;
+using EasySharp.Logging.Options;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
 using Serilog.Filters;
 
-namespace Lunch.Extension.Logging
+namespace EasySharp.Logging
 {
     public static class Extensions
     {
-        public static IHostBuilder UseEasyCloudLogging(this IHostBuilder hostBuilder,
-            Action<LoggerConfiguration> configure = null)
+        public static IHostBuilder UseSimpleLogging(this IHostBuilder hostBuilder, 
+            Action<LoggerConfiguration> configure = null) 
         {
             return hostBuilder.UseSerilog((context, loggerConfig) =>
             {

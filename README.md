@@ -1,5 +1,5 @@
 # simple-logger
-This library aims to provide easy way of logging in .netcore web application.
+This library aims to provide easy logging in .netcore web application.
 
 ![](https://vistr.dev/badge?repo=mkojoa.simple-logge&color=0058AD)
 

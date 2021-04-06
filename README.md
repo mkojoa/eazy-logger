@@ -41,7 +41,7 @@ simple-logging provides File Log and Seq Log options. See logging configuration 
       "interval": "day"
     },
     "seq": {
-      "enabled": true,
+      "enabled": false,
       "url": "http://localhost:5341",
       "token": "secret"
     }

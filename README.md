@@ -4,7 +4,8 @@ This library aims to provide easy logging in .netcore web application.
 ![](https://vistr.dev/badge?repo=mkojoa.simple-logge&color=0058AD)
 
 ## Features
-- [X] [simple-logging](#simple-logging)
+- [X] [Seq Logging strategy](#simple-logging)
+- [X] [File Logging stratagy](#simple-logging)
 
 ## Library dependencies
 - [X] [Serilog](#Serilog)
@@ -17,8 +18,8 @@ This library aims to provide easy logging in .netcore web application.
 
 
 #### simple-logger
-simple-logger provides support for File Log and Seq Log 
-strategy for logging in your application.
+simple-logger provides support for logging to `File` and `Seq`
+strategies in your application.
 See logging configuration below. `UseSimpleLogging()` must be used in Program.cs. By default File logging is set to `true`.
 ```c#
   public static IHostBuilder CreateHostBuilder(string[] args) =>

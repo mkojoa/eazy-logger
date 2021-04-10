@@ -6,6 +6,7 @@ This library aims to provide easy logging in .netcore web application.
 ## Features
 - [X] [Seq Logging strategy](#simple-logging)
 - [X] [File Logging stratagy](#simple-logging)
+- [ ] [Database logging strategy](#simple-logging)
 
 ## Library dependencies
 - [X] [Serilog](#Serilog)
@@ -18,7 +19,7 @@ This library aims to provide easy logging in .netcore web application.
 
 
 #### simple-logger
-simple-logger provides support for logging to `File` and `Seq`
+simple-logger provides support for logging to `File` and to `Seq`
 strategies in your application.
 See logging configuration below. `UseSimpleLogging()` must be used in Program.cs. By default File logging is set to `true`.
 ```c#

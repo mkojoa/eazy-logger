@@ -16,8 +16,10 @@ This library aims to provide easy logging in .netcore web application.
 ## Get Started
 
 
-#### simple-logging
-simple-logging provides File Log and Seq Log options. See logging configuration below. `UseSimpleLogging()` must be used in Program.cs. By default File logging is set to `true`.
+#### simple-logger
+simple-logger provides support for File Log and Seq Log 
+strategy for logging in your application.
+See logging configuration below. `UseSimpleLogging()` must be used in Program.cs. By default File logging is set to `true`.
 ```c#
   public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)

@@ -9,15 +9,8 @@ This library aims to provide easy logging in .netcore web application.
 - [X] [File](#eazy-logging)
 - [X] [Database](#eazy-logging)
 
-## Library dependencies
-- [X] [Serilog](#Serilog)
-- [X] [Microsoft.Extensions.Logging](#Microsoft.Extensions.Logging) 
-- [X] [Microsoft.Extensions](#Microsoft.Extensions) 
-- [X] [Microsoft.AspNetCore](#Microsoft.AspNetCore)
-
 
 ## Get Started
-
 
 #### eazy-logger
 Sometimes you may wish to log a message to a channel. 

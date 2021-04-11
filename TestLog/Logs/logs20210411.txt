@@ -1,0 +1,100 @@
+2021-04-11 19:34:36.754 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-04-11 19:34:36.910 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger - -
+2021-04-11 19:34:36.950 +00:00 [INF] Hosting environment: Development
+2021-04-11 19:34:36.950 +00:00 [INF] Content root path: C:\Users\cyber\RiderProjects\eazy-logger\TestLog
+2021-04-11 19:34:37.053 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger - - - 301 - - 147.8587ms
+2021-04-11 19:34:37.055 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/index.html - -
+2021-04-11 19:34:37.450 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/index.html - - - 200 - text/html;charset=utf-8 394.6493ms
+2021-04-11 19:34:37.543 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/swagger-ui-bundle.js - -
+2021-04-11 19:34:37.569 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/swagger-ui-standalone-preset.js - -
+2021-04-11 19:34:37.577 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/swagger-ui.css - -
+2021-04-11 19:34:37.743 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-04-11 19:34:37.743 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-04-11 19:34:37.743 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-04-11 19:34:37.755 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/swagger-ui.css - - - 200 142933 text/css 177.5183ms
+2021-04-11 19:34:37.799 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 230.7068ms
+2021-04-11 19:34:37.858 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 314.9898ms
+2021-04-11 19:34:38.316 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - -
+2021-04-11 19:34:38.458 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/favicon-32x32.png - -
+2021-04-11 19:34:38.461 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-04-11 19:34:38.470 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/favicon-32x32.png - - - 200 628 image/png 9.1729ms
+2021-04-11 19:34:38.900 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 584.6882ms
+2021-04-11 19:34:57.144 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/WeatherForecast - -
+2021-04-11 19:34:57.197 +00:00 [INF] Executing endpoint 'TestLog.Controllers.WeatherForecastController.Get (TestLog)'
+2021-04-11 19:34:57.223 +00:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[TestLog.WeatherForecast] Get() on controller TestLog.Controllers.WeatherForecastController (TestLog).
+2021-04-11 19:34:57.313 +00:00 [INF] Executing action method TestLog.Controllers.WeatherForecastController.Get (TestLog) - Validation state: "Valid"
+2021-04-11 19:34:57.320 +00:00 [INF] Executed action method TestLog.Controllers.WeatherForecastController.Get (TestLog), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.1497ms.
+2021-04-11 19:34:57.325 +00:00 [INF] Executing ObjectResult, writing value of type 'TestLog.WeatherForecast[]'.
+2021-04-11 19:34:57.346 +00:00 [INF] Executed action TestLog.Controllers.WeatherForecastController.Get (TestLog) in 116.4115ms
+2021-04-11 19:34:57.346 +00:00 [INF] Executed endpoint 'TestLog.Controllers.WeatherForecastController.Get (TestLog)'
+2021-04-11 19:34:57.347 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/WeatherForecast - - - 200 - application/json;+charset=utf-8 203.1134ms
+2021-04-11 19:39:22.111 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-04-11 19:39:22.230 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/index.html - -
+2021-04-11 19:39:22.322 +00:00 [INF] Hosting environment: Development
+2021-04-11 19:39:22.322 +00:00 [INF] Content root path: C:\Users\cyber\RiderProjects\eazy-logger\TestLog
+2021-04-11 19:39:22.991 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/index.html - - - 200 - text/html;charset=utf-8 767.2928ms
+2021-04-11 19:39:24.113 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - -
+2021-04-11 19:39:24.326 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 212.5775ms
+2021-04-11 19:39:30.243 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/WeatherForecast - -
+2021-04-11 19:39:30.297 +00:00 [INF] Executing endpoint 'TestLog.Controllers.WeatherForecastController.Get (TestLog)'
+2021-04-11 19:39:30.325 +00:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[TestLog.WeatherForecast] Get() on controller TestLog.Controllers.WeatherForecastController (TestLog).
+2021-04-11 19:39:30.500 +00:00 [INF] Executing action method TestLog.Controllers.WeatherForecastController.Get (TestLog) - Validation state: "Valid"
+2021-04-11 19:39:30.516 +00:00 [INF] Executed action method TestLog.Controllers.WeatherForecastController.Get (TestLog), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.7575ms.
+2021-04-11 19:39:30.526 +00:00 [INF] Executing ObjectResult, writing value of type 'TestLog.WeatherForecast[]'.
+2021-04-11 19:39:30.553 +00:00 [INF] Executed action TestLog.Controllers.WeatherForecastController.Get (TestLog) in 220.2135ms
+2021-04-11 19:39:30.553 +00:00 [INF] Executed endpoint 'TestLog.Controllers.WeatherForecastController.Get (TestLog)'
+2021-04-11 19:39:30.554 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/WeatherForecast - - - 200 - application/json;+charset=utf-8 310.7274ms
+2021-04-11 19:39:32.224 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/WeatherForecast - -
+2021-04-11 19:39:32.225 +00:00 [INF] Executing endpoint 'TestLog.Controllers.WeatherForecastController.Get (TestLog)'
+2021-04-11 19:39:32.226 +00:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[TestLog.WeatherForecast] Get() on controller TestLog.Controllers.WeatherForecastController (TestLog).
+2021-04-11 19:39:32.288 +00:00 [INF] Executing action method TestLog.Controllers.WeatherForecastController.Get (TestLog) - Validation state: "Valid"
+2021-04-11 19:39:32.288 +00:00 [INF] Executed action method TestLog.Controllers.WeatherForecastController.Get (TestLog), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.0632ms.
+2021-04-11 19:39:32.288 +00:00 [INF] Executing ObjectResult, writing value of type 'TestLog.WeatherForecast[]'.
+2021-04-11 19:39:32.290 +00:00 [INF] Executed action TestLog.Controllers.WeatherForecastController.Get (TestLog) in 63.7431ms
+2021-04-11 19:39:32.290 +00:00 [INF] Executed endpoint 'TestLog.Controllers.WeatherForecastController.Get (TestLog)'
+2021-04-11 19:39:32.290 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/WeatherForecast - - - 200 - application/json;+charset=utf-8 65.8606ms
+2021-04-11 19:39:32.744 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/WeatherForecast - -
+2021-04-11 19:39:32.744 +00:00 [INF] Executing endpoint 'TestLog.Controllers.WeatherForecastController.Get (TestLog)'
+2021-04-11 19:39:32.744 +00:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[TestLog.WeatherForecast] Get() on controller TestLog.Controllers.WeatherForecastController (TestLog).
+2021-04-11 19:39:32.787 +00:00 [INF] Executing action method TestLog.Controllers.WeatherForecastController.Get (TestLog) - Validation state: "Valid"
+2021-04-11 19:39:32.787 +00:00 [INF] Executed action method TestLog.Controllers.WeatherForecastController.Get (TestLog), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.0297ms.
+2021-04-11 19:39:32.787 +00:00 [INF] Executing ObjectResult, writing value of type 'TestLog.WeatherForecast[]'.
+2021-04-11 19:39:32.788 +00:00 [INF] Executed action TestLog.Controllers.WeatherForecastController.Get (TestLog) in 43.3128ms
+2021-04-11 19:39:32.788 +00:00 [INF] Executed endpoint 'TestLog.Controllers.WeatherForecastController.Get (TestLog)'
+2021-04-11 19:39:32.788 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/WeatherForecast - - - 200 - application/json;+charset=utf-8 44.5024ms
+2021-04-11 19:39:32.996 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/WeatherForecast - -
+2021-04-11 19:39:32.997 +00:00 [INF] Executing endpoint 'TestLog.Controllers.WeatherForecastController.Get (TestLog)'
+2021-04-11 19:39:32.997 +00:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[TestLog.WeatherForecast] Get() on controller TestLog.Controllers.WeatherForecastController (TestLog).
+2021-04-11 19:39:33.052 +00:00 [INF] Executing action method TestLog.Controllers.WeatherForecastController.Get (TestLog) - Validation state: "Valid"
+2021-04-11 19:39:33.052 +00:00 [INF] Executed action method TestLog.Controllers.WeatherForecastController.Get (TestLog), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.052ms.
+2021-04-11 19:39:33.052 +00:00 [INF] Executing ObjectResult, writing value of type 'TestLog.WeatherForecast[]'.
+2021-04-11 19:39:33.053 +00:00 [INF] Executed action TestLog.Controllers.WeatherForecastController.Get (TestLog) in 55.8117ms
+2021-04-11 19:39:33.053 +00:00 [INF] Executed endpoint 'TestLog.Controllers.WeatherForecastController.Get (TestLog)'
+2021-04-11 19:39:33.053 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/WeatherForecast - - - 200 - application/json;+charset=utf-8 57.1285ms
+2021-04-11 19:39:33.249 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/WeatherForecast - -
+2021-04-11 19:39:33.249 +00:00 [INF] Executing endpoint 'TestLog.Controllers.WeatherForecastController.Get (TestLog)'
+2021-04-11 19:39:33.250 +00:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[TestLog.WeatherForecast] Get() on controller TestLog.Controllers.WeatherForecastController (TestLog).
+2021-04-11 19:39:33.298 +00:00 [INF] Executing action method TestLog.Controllers.WeatherForecastController.Get (TestLog) - Validation state: "Valid"
+2021-04-11 19:39:33.299 +00:00 [INF] Executed action method TestLog.Controllers.WeatherForecastController.Get (TestLog), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.0439ms.
+2021-04-11 19:39:33.299 +00:00 [INF] Executing ObjectResult, writing value of type 'TestLog.WeatherForecast[]'.
+2021-04-11 19:39:33.300 +00:00 [INF] Executed action TestLog.Controllers.WeatherForecastController.Get (TestLog) in 50.133ms
+2021-04-11 19:39:33.300 +00:00 [INF] Executed endpoint 'TestLog.Controllers.WeatherForecastController.Get (TestLog)'
+2021-04-11 19:39:33.301 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/WeatherForecast - - - 200 - application/json;+charset=utf-8 51.3431ms
+2021-04-11 19:39:33.434 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/WeatherForecast - -
+2021-04-11 19:39:33.434 +00:00 [INF] Executing endpoint 'TestLog.Controllers.WeatherForecastController.Get (TestLog)'
+2021-04-11 19:39:33.434 +00:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[TestLog.WeatherForecast] Get() on controller TestLog.Controllers.WeatherForecastController (TestLog).
+2021-04-11 19:39:33.507 +00:00 [INF] Executing action method TestLog.Controllers.WeatherForecastController.Get (TestLog) - Validation state: "Valid"
+2021-04-11 19:39:33.507 +00:00 [INF] Executed action method TestLog.Controllers.WeatherForecastController.Get (TestLog), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.0307ms.
+2021-04-11 19:39:33.508 +00:00 [INF] Executing ObjectResult, writing value of type 'TestLog.WeatherForecast[]'.
+2021-04-11 19:39:33.508 +00:00 [INF] Executed action TestLog.Controllers.WeatherForecastController.Get (TestLog) in 73.6869ms
+2021-04-11 19:39:33.508 +00:00 [INF] Executed endpoint 'TestLog.Controllers.WeatherForecastController.Get (TestLog)'
+2021-04-11 19:39:33.509 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/WeatherForecast - - - 200 - application/json;+charset=utf-8 74.9273ms
+2021-04-11 19:39:33.683 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/WeatherForecast - -
+2021-04-11 19:39:33.683 +00:00 [INF] Executing endpoint 'TestLog.Controllers.WeatherForecastController.Get (TestLog)'
+2021-04-11 19:39:33.683 +00:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[TestLog.WeatherForecast] Get() on controller TestLog.Controllers.WeatherForecastController (TestLog).
+2021-04-11 19:39:33.752 +00:00 [INF] Executing action method TestLog.Controllers.WeatherForecastController.Get (TestLog) - Validation state: "Valid"
+2021-04-11 19:39:33.753 +00:00 [INF] Executed action method TestLog.Controllers.WeatherForecastController.Get (TestLog), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.0313ms.
+2021-04-11 19:39:33.753 +00:00 [INF] Executing ObjectResult, writing value of type 'TestLog.WeatherForecast[]'.
+2021-04-11 19:39:33.753 +00:00 [INF] Executed action TestLog.Controllers.WeatherForecastController.Get (TestLog) in 69.9641ms
+2021-04-11 19:39:33.753 +00:00 [INF] Executed endpoint 'TestLog.Controllers.WeatherForecastController.Get (TestLog)'
+2021-04-11 19:39:33.754 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/WeatherForecast - - - 200 - application/json;+charset=utf-8 71.2885ms

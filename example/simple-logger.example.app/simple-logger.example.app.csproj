@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\EasySharp\EasySharp.csproj" />
+    <ProjectReference Include="..\..\src\eazy-logger\eazy-logger.csproj" />
   </ItemGroup>
 
 </Project>

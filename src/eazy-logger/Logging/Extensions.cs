@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using EasySharp.Logging.Options;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
 using Serilog.Filters;
 
-namespace EasySharp.Logging
+namespace eazy
 {
     public static class Extensions
     {

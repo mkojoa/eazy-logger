@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using EasySharp.Logging.Options;
 
-namespace EasySharp.Logging
+namespace eazy
 {
     public class LoggerOptions
     {

@@ -1,4 +1,4 @@
-﻿namespace EasySharp.Logging.Options
+﻿namespace eazy
 {
     public class FileOptions
     {

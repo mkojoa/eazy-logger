@@ -55,7 +55,7 @@ Add `UseEazyLogging()` to the web host builder in BuildWebHost().
       "database": {
         "enabled": true,
         "name": "DatabaseName",
-        "table": "TableName",
+        "table": "Logs",
         "instance": "SqlInstanceName",
         "userName": "root",
         "password": "root@123",

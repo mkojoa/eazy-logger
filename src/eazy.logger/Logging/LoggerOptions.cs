@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using eazy.logger.Logging.Options;
 
-namespace eazy
+namespace eazy.logger.Logging
 {
     public class LoggerOptions
     {

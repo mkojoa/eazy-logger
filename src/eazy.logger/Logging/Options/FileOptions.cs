@@ -1,4 +1,4 @@
-﻿namespace eazy
+﻿namespace eazy.logger.Logging.Options
 {
     public class FileOptions
     {

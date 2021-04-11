@@ -1,4 +1,4 @@
-# simple-logger
+# eazy-logger
 This library aims to provide easy logging in .netcore web application.
 
 ![](https://vistr.dev/badge?repo=mkojoa.simple-logge&color=0058AD)
@@ -18,8 +18,8 @@ This library aims to provide easy logging in .netcore web application.
 ## Get Started
 
 
-#### simple-logger
-simple-logger provides support for logging to `File` and to `Seq`
+#### eazy-logger
+eazy-logger provides support for logging to `File` and to `Seq`
 strategies in your application.
 See logging configuration below. `UseSimpleLogging()` must be used in Program.cs. By default File logging is set to `true`.
 ```c#
@@ -35,7 +35,7 @@ See logging configuration below. `UseSimpleLogging()` must be used in Program.cs
  `app.settings.json` file
  
 ```yaml
-   "LoggerOptions": {
+  "LoggerOptions": {
     "applicationName": "simple-logging-service",
     "excludePaths": [ "/ping", "/metrics" ],
     "level": "information",

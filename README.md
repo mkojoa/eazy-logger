@@ -21,7 +21,7 @@ This library aims to provide easy logging in .netcore web application.
 
 #### eazy-logger
 Sometimes you may wish to log a message to a channel. 
-You may use the channel property on the LoggerOption to enable or disable and log to any channel defined ([appsettings](http://example.com)):
+You may use the channel property on the LoggerOption to enable or disable and log to any channel defined. ([appsettings])
 
 ###### Note : 
     - By default File logging is set to `true` with path `Logs/logs.txt`.
@@ -40,9 +40,9 @@ Add `UseEazyLogging()` to the web host builder in BuildWebHost().
 
  
 > Once you have configured the `UseEazyLogging()` in the Program.cs file, 
-> you're ready to define the `LoggerOptions` in the appsettings.
+> you're ready to define the `LoggerOptions` in the `app.settings.json`.
 
- `app.settings.json` file
+###### appsettings
  
 ```yaml
    "LoggerOptions": {
@@ -73,3 +73,5 @@ Add `UseEazyLogging()` to the web host builder in BuildWebHost().
       }
   }
 ```
+
+

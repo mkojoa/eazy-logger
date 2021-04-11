@@ -7,14 +7,15 @@ using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
 using Serilog.Filters;
+using Serilog.Sinks.MSSqlServer;
 
 namespace eazy.logger.Logging
 {
     public static class Extensions
     {
-        public static IHostBuilder UseSimpleLogging(this IHostBuilder hostBuilder, 
+        public static IHostBuilder UseEazyLogging(this IHostBuilder hostBuilder, 
             Action<LoggerConfiguration> configure = null) 
-        {
+        { 
             return hostBuilder.UseSerilog((context, loggerConfig) =>
             {
                 var options = new LoggerOptions();
@@ -57,6 +58,7 @@ namespace eazy.logger.Logging
 
                 var fileOptions = options.File ?? new FileOptions();
                 var seqOptions = options.Seq ?? new SeqOptions();
+                var databaseOptions = options.Database ?? new DatabaseOptions();
 
                 // check if log file option is enabled
                 if (fileOptions.Enabled)
@@ -72,6 +74,18 @@ namespace eazy.logger.Logging
                 // check if seq option is enabled
                 if (seqOptions.Enabled)
                     loggerConfig.WriteTo.Seq(seqOptions.Url, apiKey: seqOptions.ApiKey);
+
+
+                // check if database option is enabled
+                if (databaseOptions.Enabled)
+                    loggerConfig.WriteTo.MSSqlServer(
+                        connectionString: $"Server={databaseOptions.Instance};" +
+                                          $"Database={databaseOptions.Name};" +
+                                          $"Integrated Security={databaseOptions.IntegratedSecurity};" +
+                                          $"User ID={databaseOptions.UserName};" +
+                                          $"Password={databaseOptions.Password}",
+                        sinkOptions: new MSSqlServerSinkOptions { TableName = $"{databaseOptions.Table}" }
+                        );
             });
         }
 

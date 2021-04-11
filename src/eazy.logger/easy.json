@@ -12,6 +12,18 @@
       "enabled": true,
       "url": "http://localhost:5341",
       "token": "secret"
+    },
+    "database": {
+      "enabled": true,
+      "name": "HelthCheckDb",
+      "table": "EventLog",
+      "instance": "DESKTOP-6BR1LOC",
+      "userName": "sa",
+      "password": "",
+      "encrypt": "False",
+      "trustedConnection": "False",
+      "trustServerCertificate": "True",
+      "integratedSecurity": "SSPI"
     }
   }
 }

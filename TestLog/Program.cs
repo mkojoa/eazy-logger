@@ -19,7 +19,7 @@ namespace TestLog
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-            .UseEazyLogging()
+            .UseEazyLogging() // enable loggind
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();

@@ -58,6 +58,7 @@ namespace EasySharp.Logging
                 var fileOptions = options.File ?? new FileOptions();
                 var seqOptions = options.Seq ?? new SeqOptions();
 
+                // check if log file option is enabled
                 if (fileOptions.Enabled)
                 {
                     var path = string.IsNullOrWhiteSpace(fileOptions.Path) ? "Logs/logs.txt" : fileOptions.Path;
@@ -67,7 +68,8 @@ namespace EasySharp.Logging
 
                     loggerConfig.WriteTo.File(path, rollingInterval: interval);
                 }
-
+                
+                // check if seq option is enabled
                 if (seqOptions.Enabled)
                     loggerConfig.WriteTo.Seq(seqOptions.Url, apiKey: seqOptions.ApiKey);
             });

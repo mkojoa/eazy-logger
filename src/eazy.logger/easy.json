@@ -1,7 +1,7 @@
 {
   "LoggerOptions": {
-    "applicationName": "simple-logging-service",
-    "excludePaths": [ "/ping", "/metrics" ],
+    "name": "simple-logging-service",
+    "ignoredPaths": [ "/ping", "/metrics" ],
     "level": "information",
     "file": {
       "enabled": true,

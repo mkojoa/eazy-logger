@@ -29,7 +29,7 @@ namespace eazy.logger.Logging
                     .Enrich
                     .WithProperty("Environment",
                         context.HostingEnvironment.EnvironmentName) //development ? production
-                    .Enrich.WithProperty("Application", options.ApplicationName) //App Name
+                    .Enrich.WithProperty("Application", options.Name) //App Name
                     .Enrich.WithProperty("Instance", "Instance")
                     .Enrich.WithProperty("Version", "v1");
 
@@ -47,12 +47,12 @@ namespace eazy.logger.Logging
                     loggerConfig.MinimumLevel.Override(key, FetchLogEventLevel(value));
 
 
-                options.ExcludePaths?.ToList().ForEach(p
+                options.IgnoredPaths?.ToList().ForEach(p
                     => loggerConfig.Filter
                         .ByExcluding(
                             Matching.WithProperty<string>("RequestPath", n => n.EndsWith(p))));
 
-                options.ExcludeProperties?.ToList().ForEach(p
+                options.IgnoredProperties?.ToList().ForEach(p
                     => loggerConfig.Filter
                         .ByExcluding(Matching.WithProperty(p)));
 
@@ -97,7 +97,7 @@ namespace eazy.logger.Logging
             loggerConfig.Enrich.FromLogContext()
                 .MinimumLevel.Is(level)
                 .Enrich.WithProperty("Environment", environmentName)
-                .Enrich.WithProperty("Application", loggerOptions.ApplicationName)
+                .Enrich.WithProperty("Application", loggerOptions.Name)
                 .Enrich.WithProperty("Instance", "Instance")
                 .Enrich.WithProperty("Version", "v1");
 
@@ -110,12 +110,12 @@ namespace eazy.logger.Logging
                 loggerConfig.MinimumLevel.Override(key, logLevel);
             }
 
-            loggerOptions.ExcludePaths?.ToList().ForEach(p => loggerConfig.Filter
+            loggerOptions.IgnoredPaths?.ToList().ForEach(p => loggerConfig.Filter
                 .ByExcluding(
                     Matching.WithProperty<string>(
                         "RequestPath", n => n.EndsWith(p))));
 
-            loggerOptions.ExcludeProperties?.ToList().ForEach(p => loggerConfig.Filter
+            loggerOptions.IgnoredProperties?.ToList().ForEach(p => loggerConfig.Filter
                 .ByExcluding(Matching.WithProperty(p)));
         }
 

@@ -20,7 +20,7 @@ Use the channel property on the LoggerOption to enable or disable and log
 to any channel defined here - [appsettings]
 
 ###### Note : 
-    - By default File logging is set to `true` with path `Logs/logs.txt`.
+    - By default File logging is set to true with path Logs/logs.txt.
 
 Add `UseEazyLogging()` to the web host builder in BuildWebHost().
 ```c#

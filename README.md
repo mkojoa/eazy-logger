@@ -1,5 +1,5 @@
 # eazy-logger
-Logging is a very critical and essential part of any software. This is why easy-logger is here to make log integration much easier.
+Logging is an important part of modern application development, regardless of the platform targeted. This is why easy-logger is here to make log integration much easier.
 This library aims to provide easy logging in .netcore web application.
 
 ![](https://vistr.dev/badge?repo=mkojoa.eazy-logge&color=0058AD)
@@ -12,9 +12,12 @@ This library aims to provide easy logging in .netcore web application.
 
 ## Get Started
 
+#### Installation (Not Yet)
+    - Install-Package eazy-logger
 #### eazy-logger
-Sometimes you may wish to log a message to a channel. 
-You may use the channel property on the LoggerOption to enable or disable and log to any channel defined. ([appsettings])
+eazy-logger is based on `channels`. Each channel represents a specific way of writing application logs information
+Use the channel property on the LoggerOption to enable or disable and log 
+to any channel defined here - [appsettings]
 
 ###### Note : 
     - By default File logging is set to `true` with path `Logs/logs.txt`.

@@ -16,7 +16,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{1C2A7E46-53EE-40FE-B88D-DE2BDE6B10EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLog", "TestLog\TestLog.csproj", "{461F5ECB-8581-42F1-B288-CF4288802D49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestLog", "TestLog\TestLog.csproj", "{461F5ECB-8581-42F1-B288-CF4288802D49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eazy.logger.ui", "src\eazy.logger.ui\eazy.logger.ui.csproj", "{463E207C-F76E-44ED-A6BC-3A04FB1E7086}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{461F5ECB-8581-42F1-B288-CF4288802D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{461F5ECB-8581-42F1-B288-CF4288802D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{461F5ECB-8581-42F1-B288-CF4288802D49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{463E207C-F76E-44ED-A6BC-3A04FB1E7086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{463E207C-F76E-44ED-A6BC-3A04FB1E7086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{463E207C-F76E-44ED-A6BC-3A04FB1E7086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{463E207C-F76E-44ED-A6BC-3A04FB1E7086}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{78B708BB-FE17-457A-BFB3-DC8E1856B529} = {9CD8CE05-D86D-4BEF-B936-7E0E81F822D0}
 		{461F5ECB-8581-42F1-B288-CF4288802D49} = {1C2A7E46-53EE-40FE-B88D-DE2BDE6B10EE}
+		{463E207C-F76E-44ED-A6BC-3A04FB1E7086} = {9CD8CE05-D86D-4BEF-B936-7E0E81F822D0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2DFD7E92-EF81-45CF-9092-B1421B8E7B38}

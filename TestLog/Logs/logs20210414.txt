@@ -85,3 +85,67 @@ System.ArgumentNullException: Value cannot be null. (Parameter 'stream')
 2021-04-14 13:16:30.843 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger - - - 301 - - 22158.6302ms
 2021-04-14 13:16:30.852 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/index.html - -
 2021-04-14 13:16:31.573 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/index.html - - - 200 - text/html;charset=utf-8 720.6513ms
+2021-04-14 13:38:01.141 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-04-14 13:38:01.266 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/index.html - -
+2021-04-14 13:38:01.283 +00:00 [INF] Hosting environment: Development
+2021-04-14 13:38:01.283 +00:00 [INF] Content root path: C:\Users\cyber\RiderProjects\eazy-logger\TestLog
+2021-04-14 13:38:02.178 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/index.html - - - 200 - text/html;charset=utf-8 793.1622ms
+2021-04-14 13:38:02.753 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - -
+2021-04-14 13:38:02.846 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/favicon-32x32.png - -
+2021-04-14 13:38:02.890 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-04-14 13:38:02.895 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/favicon-32x32.png - - - 200 628 image/png 48.1277ms
+2021-04-14 13:38:03.036 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 282.6795ms
+2021-04-14 13:38:14.839 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/index.html - -
+2021-04-14 13:38:17.591 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/index.html - - - 200 - text/html;charset=utf-8 2752.1395ms
+2021-04-14 13:38:17.651 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/css/app.css - -
+2021-04-14 13:38:17.651 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/css/main.css - -
+2021-04-14 13:38:31.229 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/js/app.js - -
+2021-04-14 13:38:31.283 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/css/app.css - - - 404 - - 13632.6847ms
+2021-04-14 13:38:31.287 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/css/main.css - - - 404 - - 13635.6874ms
+2021-04-14 13:38:31.287 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/js/app.js - - - 404 - - 57.0739ms
+2021-04-14 13:38:32.052 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/js/functions.js - -
+2021-04-14 13:38:32.052 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/js/main.js - -
+2021-04-14 13:38:32.054 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/js/main.js - - - 404 - - 1.3090ms
+2021-04-14 13:38:32.054 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/js/functions.js - - - 404 - - 1.3091ms
+2021-04-14 13:38:32.057 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/js/components.js - -
+2021-04-14 13:38:32.058 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/js/components.js - - - 404 - - 0.8460ms
+2021-04-14 13:38:32.066 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/js/popover.js - -
+2021-04-14 13:38:32.067 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/js/popover.js - - - 404 - - 1.0757ms
+2021-04-14 13:38:32.070 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/js/widgets.js - -
+2021-04-14 13:38:32.070 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/js/widgets.js - - - 404 - - 0.8743ms
+2021-04-14 13:38:32.078 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/js/touch.js - -
+2021-04-14 13:38:32.079 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/js/touch.js - - - 404 - - 1.4246ms
+2021-04-14 13:38:32.095 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/js/banking-2.js - -
+2021-04-14 13:38:32.095 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/js/banking-2.js - - - 404 - - 0.8765ms
+2021-04-14 13:38:32.096 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/js/syntax.js - -
+2021-04-14 13:38:32.099 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/js/syntax.js - - - 404 - - 2.8027ms
+2021-04-14 13:38:32.105 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/logos/logo/logo.svg - -
+2021-04-14 13:38:32.106 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/logos/logo/logo.svg - - - 404 - - 1.0938ms
+2021-04-14 13:38:32.109 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/logos/logo/logo-light.svg - -
+2021-04-14 13:38:32.110 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/logos/logo/logo-light.svg - - - 404 - - 1.0208ms
+2021-04-14 13:38:32.121 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/js/syntax.js - -
+2021-04-14 13:38:32.123 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/js/syntax.js - - - 404 - - 1.6058ms
+2021-04-14 13:38:32.125 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/icons/flags/united-states-of-america.svg - -
+2021-04-14 13:38:32.126 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/icons/flags/united-states-of-america.svg - - - 404 - - 0.9073ms
+2021-04-14 13:38:32.130 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/icons/flags/france.svg - -
+2021-04-14 13:38:32.131 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/icons/flags/france.svg - - - 404 - - 1.1850ms
+2021-04-14 13:38:32.135 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/icons/flags/spain.svg - -
+2021-04-14 13:38:32.136 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/icons/flags/spain.svg - - - 404 - - 0.9041ms
+2021-04-14 13:38:32.396 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/icons/flags/mexico.svg - -
+2021-04-14 13:38:32.397 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/icons/flags/germany.svg - -
+2021-04-14 13:38:32.397 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/icons/flags/mexico.svg - - - 404 - - 1.4875ms
+2021-04-14 13:38:32.399 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/icons/flags/germany.svg - - - 404 - - 2.2598ms
+2021-04-14 13:38:32.415 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/illustrations/right-panel/languages.svg - -
+2021-04-14 13:38:32.415 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/icons/flags/china.svg - -
+2021-04-14 13:38:32.418 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/icons/flags/china.svg - - - 404 - - 2.5775ms
+2021-04-14 13:38:32.418 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/illustrations/right-panel/languages-dark.svg - -
+2021-04-14 13:38:32.418 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/icons/dashboards/banking/visa-text-white.svg - -
+2021-04-14 13:38:32.420 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/icons/dashboards/banking/visa-text-white.svg - - - 404 - - 1.6374ms
+2021-04-14 13:38:32.422 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/illustrations/right-panel/languages-dark.svg - - - 404 - - 4.2864ms
+2021-04-14 13:38:32.423 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/icons/dashboards/banking/visa-text-dark.svg - -
+2021-04-14 13:38:32.426 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/illustrations/right-panel/languages.svg - - - 404 - - 10.7907ms
+2021-04-14 13:38:32.428 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/icons/dashboards/banking/visa-text-dark.svg - - - 404 - - 5.0553ms
+2021-04-14 13:38:32.494 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/favicon.png - -
+2021-04-14 13:38:32.495 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/img/favicon.png - - - 404 - - 0.6699ms
+2021-04-14 13:38:51.390 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/assets/css/app.css - -
+2021-04-14 13:38:51.395 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/assets/css/app.css - - - 404 - - 4.3612ms

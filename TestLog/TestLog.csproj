@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\eazy.logger.ui\eazy.logger.ui.csproj" />
     <ProjectReference Include="..\src\eazy.logger\eazy.logger.csproj" />
   </ItemGroup>
 

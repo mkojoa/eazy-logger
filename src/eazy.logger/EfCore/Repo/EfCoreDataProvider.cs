@@ -14,14 +14,11 @@ namespace eazy.logger.EfCore.Repo
 {
     public class EfCoreDataProvider : IEfDataProvider
     {
-
-        private readonly LoggerOptions _main;
         private readonly DatabaseOptions _options;
 
         public EfCoreDataProvider(LoggerOptions options)
         {
-            _main = options;
-            _options = _main.Database;
+            _options = options.Database;
         }
 
         public async Task<(IEnumerable<LogModel>, int)> FetchDataAsync(
@@ -71,24 +68,21 @@ namespace eazy.logger.EfCore.Repo
                             $"Encrypt={_options.Encrypt};" +
                             $"TrustServerCertificate={_options.TrustServerCertificate}";
 
-            using (IDbConnection connection = new SqlConnection(fullConec)) 
-            {
-                
-                var logs = await connection.QueryAsync<SqlServerLogModel>(queryBuilder.ToString(),
-                    new
-                    {
-                        Offset = page * count,
-                        Count = count,
-                        Level = level,
-                        Search = searchCriteria != null ? "%" + searchCriteria + "%" : null
-                    });
+            using IDbConnection connection = new SqlConnection(fullConec);
+            var logs = await connection.QueryAsync<SqlServerLogModel>(queryBuilder.ToString(),
+                new
+                {
+                    Offset = page * count,
+                    Count = count,
+                    Level = level,
+                    Search = searchCriteria != null ? "%" + searchCriteria + "%" : null
+                });
 
-                var index = 1;
-                foreach (var log in logs)
-                    log.RowNo = (page * count) + index++;
+            var index = 1;
+            foreach (var log in logs)
+                log.RowNo = (page * count) + index++;
 
-                return logs;
-            }
+            return logs;
         }
 
         public async Task<int> CountLogsAsync(string level, string searchCriteria)
@@ -125,15 +119,13 @@ namespace eazy.logger.EfCore.Repo
                             $"TrustServerCertificate={_options.TrustServerCertificate}";
 
 
-            using (IDbConnection connection = new SqlConnection(fullConec))
-            {
-                return await connection.ExecuteScalarAsync<int>(queryBuilder.ToString(),
-                    new
-                    {
-                        Level = level,
-                        Search = searchCriteria != null ? "%" + searchCriteria + "%" : null
-                    });
-            }
+            using IDbConnection connection = new SqlConnection(fullConec);
+            return await connection.ExecuteScalarAsync<int>(queryBuilder.ToString(),
+                new
+                {
+                    Level = level,
+                    Search = searchCriteria != null ? "%" + searchCriteria + "%" : null
+                });
         }
     }
 }

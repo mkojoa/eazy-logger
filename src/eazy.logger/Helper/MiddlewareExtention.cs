@@ -1,6 +1,11 @@
-﻿using eazy.logger.EfCore;
-using eazy.logger.ui.Helper;
-using Microsoft.AspNetCore.Authorization;
+﻿using System;
+using System.IO;
+using System.Net;
+using System.Reflection;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using eazy.logger.EfCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -12,19 +17,12 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using System;
-using System.IO;
-using System.Net;
-using System.Reflection;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
-namespace eazy.logger.ui
+namespace eazy.logger.Helper
 {
     public class MiddlewareExtention
     {
-        private const string EmbeddedFileNamespace = "eazy.logger.ui.wwwroot.dist";
+        private const string EmbeddedFileNamespace = "eazy.logger.wwwroot.dist";
         private readonly UiOptions _options;
         private readonly StaticFileMiddleware _staticFileMiddleware;
         private readonly JsonSerializerSettings _jsonSerializerOptions;
@@ -133,7 +131,7 @@ namespace eazy.logger.ui
         }
 
         private Func<Stream> IndexStream { get; } =
-            () => Assembly.GetExecutingAssembly().GetManifestResourceStream("eazy.logger.ui.wwwroot.index.html");
+            () => Assembly.GetExecutingAssembly().GetManifestResourceStream("eazy.logger.wwwroot.index.html");
 
         private async Task<string> FetchLogsAsync(HttpContext httpContext)
         {

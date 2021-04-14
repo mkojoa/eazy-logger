@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using eazy.logger.Helper;
+using eazy.logger.Logging;
 using eazy.logger.Logging.Options;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
@@ -10,7 +12,7 @@ using Serilog.Events;
 using Serilog.Filters;
 using Serilog.Sinks.MSSqlServer;
 
-namespace eazy.logger.Logging
+namespace eazy.logger
 {
     public static class Extensions
     {
@@ -88,6 +90,23 @@ namespace eazy.logger.Logging
                         sinkOptions: new MSSqlServerSinkOptions { TableName = $"{databaseOptions.Table}" }
                         );
             });
+        }
+        
+        public static IApplicationBuilder UseEazyLoggerUi(this IApplicationBuilder applicationBuilder, Action<UiOptions> options = null)
+        { 
+            if (applicationBuilder == null)
+                throw new ArgumentNullException(nameof(applicationBuilder));
+
+            var uiOptions = new UiOptions();
+            options?.Invoke(uiOptions);
+
+            //var scope = applicationBuilder.ApplicationServices.CreateScope();
+            //var authOptions = scope.ServiceProvider.GetService<AuthorizationOptions>();
+            //uiOptions.AuthType = authOptions.AuthenticationType.ToString();
+
+            //scope.Dispose();
+
+            return applicationBuilder.UseMiddleware<MiddlewareExtention>(uiOptions);
         }
 
 

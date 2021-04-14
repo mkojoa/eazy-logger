@@ -21,7 +21,8 @@ namespace eazy.logger.EfCore.Entity
         public virtual string PropertyType { get; set; }
     }
 
-    internal class SqlServerLogModel : LogModel
+    
+    internal abstract class SqlServerLogModel : LogModel
     {
         public override string PropertyType => "xml";
     }

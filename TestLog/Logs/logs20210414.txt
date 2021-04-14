@@ -60,3 +60,28 @@ System.ArgumentNullException: Value cannot be null. (Parameter 'stream')
 2021-04-14 12:06:19.196 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy.logger.ui - - - 404 - - 1.0452ms
 2021-04-14 12:07:11.147 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger-ui/index.html - -
 2021-04-14 12:07:45.307 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger-ui/index.html - - - 200 - text/html;charset=utf-8 34158.9372ms
+2021-04-14 13:13:19.029 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-04-14 13:13:19.140 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/index.html - -
+2021-04-14 13:13:19.168 +00:00 [INF] Hosting environment: Development
+2021-04-14 13:13:19.168 +00:00 [INF] Content root path: C:\Users\cyber\RiderProjects\eazy-logger\TestLog
+2021-04-14 13:13:19.652 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/index.html - - - 200 - text/html;charset=utf-8 533.6049ms
+2021-04-14 13:13:20.403 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - -
+2021-04-14 13:13:20.654 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 251.3253ms
+2021-04-14 13:13:33.846 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger - -
+2021-04-14 13:13:33.936 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger - - - 404 - - 90.2668ms
+2021-04-14 13:13:45.050 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger - -
+2021-04-14 13:13:45.053 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger - - - 404 - - 2.7086ms
+2021-04-14 13:14:17.458 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger - -
+2021-04-14 13:14:29.400 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger - - - 404 - - 11942.0464ms
+2021-04-14 13:14:33.688 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger - -
+2021-04-14 13:15:59.233 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-04-14 13:15:59.393 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/index.html - -
+2021-04-14 13:15:59.411 +00:00 [INF] Hosting environment: Development
+2021-04-14 13:15:59.411 +00:00 [INF] Content root path: C:\Users\cyber\RiderProjects\eazy-logger\TestLog
+2021-04-14 13:16:00.120 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/index.html - - - 200 - text/html;charset=utf-8 733.2947ms
+2021-04-14 13:16:00.891 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - -
+2021-04-14 13:16:01.221 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 330.0514ms
+2021-04-14 13:16:08.685 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger - -
+2021-04-14 13:16:30.843 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger - - - 301 - - 22158.6302ms
+2021-04-14 13:16:30.852 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/index.html - -
+2021-04-14 13:16:31.573 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/index.html - - - 200 - text/html;charset=utf-8 720.6513ms

@@ -1,0 +1,62 @@
+2021-04-14 11:51:33.452 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-04-14 11:51:33.638 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/index.html - -
+2021-04-14 11:51:33.669 +00:00 [INF] Hosting environment: Development
+2021-04-14 11:51:33.669 +00:00 [INF] Content root path: C:\Users\cyber\RiderProjects\eazy-logger\TestLog
+2021-04-14 11:51:34.396 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/index.html - - - 200 - text/html;charset=utf-8 760.1326ms
+2021-04-14 11:51:36.098 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - -
+2021-04-14 11:51:36.361 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 262.9283ms
+2021-04-14 11:51:42.062 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - -
+2021-04-14 11:51:42.071 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 11.3195ms
+2021-04-14 11:51:49.726 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger-ui - -
+2021-04-14 11:51:49.762 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger-ui - - - 301 - - 38.3495ms
+2021-04-14 11:51:49.788 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger-ui/index.html - -
+2021-04-14 11:51:50.591 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'stream')
+   at System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean leaveOpen)
+   at System.IO.StreamReader..ctor(Stream stream)
+   at eazy.logger.ui.MiddlewareExtention.RespondWithIndexHtml(HttpResponse response) in C:\Users\cyber\RiderProjects\eazy-logger\src\eazy.logger.ui\Helper\MiddlewareExtention.cs:line 133
+   at eazy.logger.ui.MiddlewareExtention.RespondWithIndexHtml(HttpResponse response) in C:\Users\cyber\RiderProjects\eazy-logger\src\eazy.logger.ui\Helper\MiddlewareExtention.cs:line 137
+   at eazy.logger.ui.MiddlewareExtention.Invoke(HttpContext httpContext) in C:\Users\cyber\RiderProjects\eazy-logger\src\eazy.logger.ui\Helper\MiddlewareExtention.cs:line 98
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-04-14 11:51:50.976 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger-ui/index.html - - - 500 - text/html;+charset=utf-8 1187.9188ms
+2021-04-14 11:51:51.548 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/favicon.ico - -
+2021-04-14 11:51:51.628 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/favicon.ico - - - 404 - - 80.4396ms
+2021-04-14 11:53:08.338 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger-ui/index.html - -
+2021-04-14 11:57:09.784 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-04-14 11:57:09.862 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/index.html - -
+2021-04-14 11:57:09.923 +00:00 [INF] Hosting environment: Development
+2021-04-14 11:57:09.924 +00:00 [INF] Content root path: C:\Users\cyber\RiderProjects\eazy-logger\TestLog
+2021-04-14 11:57:10.648 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/index.html - - - 200 - text/html;charset=utf-8 789.8204ms
+2021-04-14 11:57:11.266 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - -
+2021-04-14 11:57:11.529 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 263.1021ms
+2021-04-14 11:57:16.964 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - -
+2021-04-14 11:57:16.973 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 9.6016ms
+2021-04-14 11:57:57.922 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger-ui/index.html - -
+2021-04-14 12:00:06.846 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'stream')
+   at System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean leaveOpen)
+   at System.IO.StreamReader..ctor(Stream stream)
+   at eazy.logger.ui.MiddlewareExtention.RespondWithIndexHtml(HttpResponse response) in C:\Users\cyber\RiderProjects\eazy-logger\src\eazy.logger.ui\Helper\MiddlewareExtention.cs:line 133
+   at eazy.logger.ui.MiddlewareExtention.RespondWithIndexHtml(HttpResponse response) in C:\Users\cyber\RiderProjects\eazy-logger\src\eazy.logger.ui\Helper\MiddlewareExtention.cs:line 137
+   at eazy.logger.ui.MiddlewareExtention.Invoke(HttpContext httpContext) in C:\Users\cyber\RiderProjects\eazy-logger\src\eazy.logger.ui\Helper\MiddlewareExtention.cs:line 98
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-04-14 12:00:07.548 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger-ui/index.html - - - 500 - text/html;+charset=utf-8 129625.7308ms
+2021-04-14 12:05:24.812 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-04-14 12:05:24.959 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/index.html - -
+2021-04-14 12:05:24.992 +00:00 [INF] Hosting environment: Development
+2021-04-14 12:05:24.992 +00:00 [INF] Content root path: C:\Users\cyber\RiderProjects\eazy-logger\TestLog
+2021-04-14 12:05:25.663 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/index.html - - - 200 - text/html;charset=utf-8 754.7263ms
+2021-04-14 12:05:26.495 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - -
+2021-04-14 12:05:26.775 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 278.6522ms
+2021-04-14 12:05:45.677 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy.logger.ui.wwwroot.index.html - -
+2021-04-14 12:05:58.394 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy.logger.ui.wwwroot.index.html - - - 404 - - 12683.2635ms
+2021-04-14 12:06:07.834 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy.logger.ui.wwwroot.index.html - -
+2021-04-14 12:06:07.846 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy.logger.ui.wwwroot.index.html - - - 404 - - 11.9039ms
+2021-04-14 12:06:19.195 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy.logger.ui - -
+2021-04-14 12:06:19.196 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy.logger.ui - - - 404 - - 1.0452ms
+2021-04-14 12:07:11.147 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger-ui/index.html - -
+2021-04-14 12:07:45.307 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger-ui/index.html - - - 200 - text/html;charset=utf-8 34158.9372ms

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using eazy.logger.Logging.Options;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Serilog;
@@ -88,6 +89,7 @@ namespace eazy.logger.Logging
                         );
             });
         }
+
 
         private static void MapOptions(LoggerOptions loggerOptions, string appOptions,
             LoggerConfiguration loggerConfig, string environmentName)

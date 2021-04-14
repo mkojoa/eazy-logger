@@ -1,3 +1,4 @@
+using eazy.logger.ui;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +29,7 @@ namespace TestLog
         {
 
             services.AddControllers();
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TestLog", Version = "v1" });
@@ -43,6 +45,8 @@ namespace TestLog
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TestLog v1"));
             }
+
+            app.UseEazyLoggerUi();
 
             app.UseHttpsRedirection();
 

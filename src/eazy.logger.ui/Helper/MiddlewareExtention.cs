@@ -61,11 +61,6 @@ namespace eazy.logger.ui
                 try
                 {
                     httpContext.Response.ContentType = "application/json;charset=utf-8";
-                    //if (!CanAccess(httpContext))
-                    //{
-                    //    httpContext.Response.StatusCode = (int)HttpStatusCode.Forbidden;
-                    //    return;
-                    //}
 
                     var result = await FetchLogsAsync(httpContext);
                     httpContext.Response.StatusCode = (int)HttpStatusCode.OK;
@@ -137,8 +132,8 @@ namespace eazy.logger.ui
             await response.WriteAsync(htmlBuilder.ToString(), Encoding.UTF8);
         }
 
-        private Func<Stream> IndexStream { get; } = () => typeof(AuthorizationOptions).GetTypeInfo().Assembly
-            .GetManifestResourceStream("eazy.logger.ui.wwwroot.index.html");
+        private Func<Stream> IndexStream { get; } =
+            () => Assembly.GetExecutingAssembly().GetManifestResourceStream("eazy.logger.ui.wwwroot.index.html");
 
         private async Task<string> FetchLogsAsync(HttpContext httpContext)
         {
@@ -159,30 +154,5 @@ namespace eazy.logger.ui
             var result = JsonConvert.SerializeObject(new { logs, total, count, currentPage }, _jsonSerializerOptions);
             return result;
         }
-
-        //private static bool CanAccess(HttpContext httpContext)
-        //{
-        //    if (httpContext.Request.IsLocal())
-        //        return true;
-
-        //    var authOptions = httpContext.RequestServices.GetService<AuthorizationOptions>();
-        //    if (!authOptions.Enabled)
-        //        return false;
-
-        //    if (!httpContext.User.Identity.IsAuthenticated)
-        //        return false;
-
-        //    var userName = httpContext.User.Identity.Name?.ToLower();
-        //    if (authOptions.Usernames != null &&
-        //        authOptions.Usernames.Any(u => u.ToLower() == userName))
-        //        return true;
-
-        //    if (authOptions.Roles != null &&
-        //        authOptions.Roles.Any(role => httpContext.User.IsInRole(role)))
-        //        return true;
-
-        //    return false;
-        //}
-
     }
 }

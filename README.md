@@ -56,7 +56,7 @@ Add `UseEazyLogging()` to the web host builder in BuildWebHost().
         "token": "secret"
       },
       "database": {
-        "enabled": true,
+        "enabled": false,
         "name": "DatabaseName",
         "table": "Logs",
         "instance": "SqlInstanceName",
@@ -69,7 +69,7 @@ Add `UseEazyLogging()` to the web host builder in BuildWebHost().
       }
   }
 ```
-Run the following script in any preferred SQL database to get DB-logging started.
+Run the following script in any preferred SQL database to get DB-logging started if  Database Log is set to true.
 
 ```sql
 CREATE TABLE [dbo].[Logs](

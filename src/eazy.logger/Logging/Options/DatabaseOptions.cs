@@ -2,7 +2,7 @@
 {
     public class DatabaseOptions
     {
-        public bool Enabled { get; set; }
+        public bool Enabled { get; set; } = false;
         public string Name { get; set; }
         public string Table { get; set; } 
         public string Instance { get; set; }

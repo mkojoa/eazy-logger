@@ -1,6 +1,6 @@
 # eazy-logger
 Logging is an important part of modern application development, regardless of the platform targeted. This is why easy-logger is here to make log integration much easier.
-This library aims to provide easy logging in .netcore web application.
+This library aims to provide easy logging in .netcore ^3.1 web application.
 
 ![](https://vistr.dev/badge?repo=mkojoa.eazy-logge&color=0058AD)
 

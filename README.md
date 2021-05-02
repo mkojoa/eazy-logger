@@ -1,4 +1,7 @@
 # eazy-logger
+[![made-with-csharp](https://img.shields.io/badge/csharp-1f425f?logo=c#)](https://microsoft.com/csharp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Logging is an important part of modern application development, regardless of the platform targeted. This is why easy-logger is here to make log integration much easier.
 This library aims to provide easy logging in .netcore ^3.1 web application.
 

@@ -40,12 +40,28 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="wwwroot\dist\css\font-awesome.min.css" />
+    <None Remove="wwwroot\dist\css\fonts\fontawesome-webfont3e6e3e6e.eot" />
+    <None Remove="wwwroot\dist\css\fonts\fontawesome-webfont3e6e3e6e.svg" />
+    <None Remove="wwwroot\dist\css\fonts\fontawesome-webfont3e6e3e6e.ttf" />
+    <None Remove="wwwroot\dist\css\fonts\fontawesome-webfont3e6e3e6e.woff" />
+    <None Remove="wwwroot\dist\css\fonts\fontawesome-webfont3e6e3e6e.woff2" />
+    <None Remove="wwwroot\dist\css\fonts\fontawesome-webfontd41dd41d.eot" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
 
   <ItemGroup>
     <EmbeddedResource Include="wwwroot\index.html" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="wwwroot\dist\vendor\bootstrap-select\dist\css\" />
+    <Folder Include="wwwroot\dist\vendor\global\" />
   </ItemGroup>
 
 </Project>

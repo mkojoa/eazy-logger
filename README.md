@@ -13,8 +13,6 @@ This library aims to provide easy logging in .netcore ^3.1 web application.
 ## Donate a cup of coffee
 <a href="https://www.buymeacoffee.com/mkojoa" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height:30px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
-Be sure to look at the Contributors' Githubs to see if they have GitHub sponsorships as well, since they have contributed to this open source project. (https://github.com/mkojoa/eazy-logger/graphs/contributors)
-
 ## Get Started
 
 #### Installation (Not Yet)

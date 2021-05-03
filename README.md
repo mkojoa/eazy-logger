@@ -47,50 +47,31 @@ Add `UseEazyLogging()` to the web host builder in BuildWebHost().
 ###### appsettings
  
 ```yaml
-   "LoggerOptions": {
-      "applicationName": "eazy-logging-service",
-      "excludePaths": [ "/ping", "/metrics" ],
-      "level": "information",
-      "file": {
-        "enabled": true,
-        "path": "Logs/logs.txt",
-        "interval": "day"
-      },
-      "seq": {
-        "enabled": false,
-        "url": "http://localhost:5341",
-        "token": "secret"
-      },
-      "database": {
-        "enabled": false,
-        "name": "DatabaseName",
-        "table": "Logs",
-        "instance": "SqlInstanceName",
-        "userName": "root",
-        "password": "root@123",
-        "encrypt": "False",
-        "trustedConnection": "False",
-        "trustServerCertificate": "True",
-        "integratedSecurity": "SSPI"
-      }
+  "LoggerOptions": {
+    "name": "eazy-api",
+    "ignoredPaths": [ "logs", "/ping", "/metrics" ],
+    "level": "information",
+    "file": {
+      "enabled": true,
+      "path": "Logs/logs.txt",
+      "interval": "day"
+    },
+    "seq": {
+      "enabled": false,
+      "url": "http://localhost:5341",
+      "token": "secret"
+    },
+    "database": {
+      "enabled": true,
+      "name": "Db-Name",
+      "table": "Logs",
+      "instance": "SQL-Instant-Name",
+      "userName": "sudo",
+      "password": "root",
+      "encrypt": "False",
+      "trustedConnection": "False",
+      "trustServerCertificate": "True",
+      "integratedSecurity": "SSPI"
+    }
   }
-```
-Run the following script in any preferred SQL database to get DB-logging started if  Database Log is set to true.
-
-```sql
-CREATE TABLE [dbo].[Logs](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[Message] [nvarchar](max) NULL,
-	[MessageTemplate] [nvarchar](max) NULL,
-	[Level] [nvarchar](128) NULL,
-	[TimeStamp] [datetimeoffset](7) NOT NULL,
-	[Exception] [nvarchar](max) NULL,
-	[Properties] [xml] NULL,
-	[LogEvent] [nvarchar](max) NULL,
- CONSTRAINT [PK_Logs] PRIMARY KEY CLUSTERED 
-(
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-
 ```

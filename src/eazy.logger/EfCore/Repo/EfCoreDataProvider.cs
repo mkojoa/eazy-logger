@@ -67,8 +67,9 @@ namespace eazy.logger.EfCore.Repo
                             $"Trusted_Connection={_options.TrustedConnection};" +
                             $"Encrypt={_options.Encrypt};" +
                             $"TrustServerCertificate={_options.TrustServerCertificate}";
-
             using IDbConnection connection = new SqlConnection(fullConec);
+        
+
             var logs = await connection.QueryAsync<SqlServerLogModel>(queryBuilder.ToString(),
                 new
                 {
@@ -126,6 +127,56 @@ namespace eazy.logger.EfCore.Repo
                     Level = level,
                     Search = searchCriteria != null ? "%" + searchCriteria + "%" : null
                 });
+        }
+
+        public void ProgramaticallyCreateTable(string fullConec)
+        {
+            var queryBuilder = new StringBuilder();
+            SqlConnection myConn = new SqlConnection(fullConec);
+
+            queryBuilder.Append("IF NOT EXISTS(SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[");
+            queryBuilder.Append("dbo");
+            queryBuilder.Append("].[");
+            queryBuilder.Append(_options.Table);
+            queryBuilder.Append("]");
+            queryBuilder.Append("') AND type in (N'U'))");
+            queryBuilder.Append("BEGIN");
+            queryBuilder.Append("CREATE TABLE[");
+            queryBuilder.Append("dbo");
+            queryBuilder.Append("].[");
+            queryBuilder.Append(_options.Table);
+            queryBuilder.Append("]");
+            queryBuilder.Append("[Id][int] IDENTITY(1, 1) NOT NULL,");
+            queryBuilder.Append("[Message] [nvarchar](max)NULL,");
+            queryBuilder.Append("[MessageTemplate] [nvarchar](max)NULL,");
+            queryBuilder.Append("[Level] [nvarchar](128) NULL,");
+            queryBuilder.Append("[TimeStamp] [datetimeoffset](7) NOT NULL,");
+            queryBuilder.Append("[Exception] [nvarchar](max)NULL,");
+            queryBuilder.Append("[Properties] [xml] NULL,");
+            queryBuilder.Append("[LogEvent] [nvarchar](max)NULL,");
+            queryBuilder.Append("CONSTRAINT[PK_Logs] PRIMARY KEY CLUSTERED");
+            queryBuilder.Append("([Id] ASC)");
+            queryBuilder.Append("WITH(PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON[PRIMARY]");
+            queryBuilder.Append(") ON[PRIMARY] TEXTIMAGE_ON[PRIMARY]");
+            queryBuilder.Append("END");
+
+            SqlCommand myCommand = new SqlCommand(queryBuilder.ToString(), myConn);
+            try
+            {
+                myConn.Open();
+                myCommand.ExecuteNonQuery();
+            }
+            catch (System.Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                if (myConn.State == ConnectionState.Open)
+                {
+                    myConn.Close();
+                }
+            }
         }
     }
 }

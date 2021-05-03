@@ -75,3 +75,6 @@ Add `UseEazyLogging()` to the web host builder in BuildWebHost().
     }
   }
 ```
+
+## Contributing
+Please do open issues if you spot any bugs, or would like to suggest new features/changes.

@@ -7,7 +7,7 @@ This library aims to provide easy logging in .netcore ^3.1 web application.
 
 ![](https://vistr.dev/badge?repo=mkojoa.eazy-logge&color=0058AD)
 
-## Available Channel Drivers
+## Channel Drivers
 - [X] [Seq](#eazy-logging)
 - [X] [File](#eazy-logging)
 - [X] [Database](#eazy-logging)
@@ -21,8 +21,8 @@ This library aims to provide easy logging in .netcore ^3.1 web application.
 #### Installation (Not Yet)
     - Install-Package eazy-logger
 #### eazy-logger
-eazy-logger is based on `channels`. Each channel represents a specific way of writing application logs information
-Use the channel property on the LoggerOption to enable or disable and log 
+eazy-logger is based on `channels`. Each channel represents a specific way of writing application logs information. 
+Use the `enabled` property on the LoggerOption to enable or disable and log 
 to any channel defined here - [appsettings]
 
 ###### Note : 

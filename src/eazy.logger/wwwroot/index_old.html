@@ -1,0 +1,869 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title> Eazy Logger UI</title>
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+
+    <!--Core CSS -->
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="huro-app" class="app-wrapper">
+
+        <div class="app-overlay"></div>
+
+        <!-- Pageloader -->
+        <div class="pageloader"></div>
+        <div class="infraloader is-active"></div>
+        <nav class="navbar mobile-navbar no-shadow is-hidden-desktop is-hidden-tablet" aria-label="main navigation">
+            <div class="container">
+                <!-- Brand -->
+                <div class="navbar-brand">
+                    <!-- Mobile menu toggler icon -->
+                    <div class="brand-start">
+                        <div class="navbar-burger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <a class="navbar-item is-brand" href="index.html">
+                        <img class="light-image" src="./img/logos/logo/logo.svg" alt="">
+                        <img class="dark-image" src="./img/logos/logo/logo-light.svg" alt="">
+                    </a>
+
+                    <div class="brand-end">
+                        <div class="navbar-item has-dropdown is-notification is-hidden-tablet is-hidden-desktop">
+                            <a class="navbar-link is-arrowless" href="javascript:void(0);">
+                                <i data-feather="bell"></i>
+                                <span class="new-indicator pulsate"></span>
+                            </a>
+                            <div class="navbar-dropdown is-boxed is-right">
+                                <div class="heading">
+                                    <div class="heading-left">
+                                        <h6 class="heading-title">Notifications</h6>
+                                    </div>
+                                    <div class="heading-right">
+                                        <a class="notification-link" href="#">See all</a>
+                                    </div>
+                                </div>
+                                <div class="inner has-slimscroll">
+
+                                    <ul class="notification-list">
+                                        <li>
+                                            <a class="notification-item">
+                                                <div class="img-left">
+                                                    <img class="user-photo" alt="" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/7.jpg" />
+                                                </div>
+                                                <div class="user-content">
+                                                    <p class="user-info"><span class="name">Alice C.</span> left a comment.</p>
+                                                    <p class="time">1 hour ago</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-item">
+                                                <div class="img-left">
+                                                    <img class="user-photo" alt="" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/12.jpg" />
+                                                </div>
+                                                <div class="user-content">
+                                                    <p class="user-info"><span class="name">Joshua S.</span> uploaded a file.</p>
+                                                    <p class="time">2 hours ago</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-item">
+                                                <div class="img-left">
+                                                    <img class="user-photo" alt="" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/13.jpg" />
+                                                </div>
+                                                <div class="user-content">
+                                                    <p class="user-info"><span class="name">Tara S.</span> sent you a message.</p>
+                                                    <p class="time">2 hours ago</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="notification-item">
+                                                <div class="img-left">
+                                                    <img class="user-photo" alt="" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/25.jpg" />
+                                                </div>
+                                                <div class="user-content">
+                                                    <p class="user-info"><span class="name">Melany W.</span> left a comment.</p>
+                                                    <p class="time">3 hours ago</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown is-right is-spaced dropdown-trigger user-dropdown">
+                            <div class="is-trigger" aria-haspopup="true">
+                                <div class="profile-avatar">
+                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/8.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="dropdown-menu" role="menu">
+                                <div class="dropdown-content">
+                                    <div class="dropdown-head">
+                                        <div class="h-avatar is-large">
+                                            <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/8.jpg" alt="">
+                                        </div>
+                                        <div class="meta">
+                                            <span>Erik Kovalsky</span>
+                                            <span>Product Manager</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="dropdown-item is-media">
+                                        <div class="icon">
+                                            <i class="lnil lnil-user-alt"></i>
+                                        </div>
+                                        <div class="meta">
+                                            <span>Profile</span>
+                                            <span>View your profile</span>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item is-media layout-switcher">
+                                        <div class="icon">
+                                            <i class="lnil lnil-layout"></i>
+                                        </div>
+                                        <div class="meta">
+                                            <span>Layout</span>
+                                            <span>Switch to admin/webapp</span>
+                                        </div>
+                                    </a>
+                                    <hr class="dropdown-divider">
+                                    <a href="#" class="dropdown-item is-media">
+                                        <div class="icon">
+                                            <i class="lnil lnil-briefcase"></i>
+                                        </div>
+                                        <div class="meta">
+                                            <span>Projects</span>
+                                            <span>All my projects</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-item is-media">
+                                        <div class="icon">
+                                            <i class="lnil lnil-users-alt"></i>
+                                        </div>
+                                        <div class="meta">
+                                            <span>Team</span>
+                                            <span>Manage your team</span>
+                                        </div>
+                                    </a>
+                                    <hr class="dropdown-divider">
+                                    <a href="#" class="dropdown-item is-media">
+                                        <div class="icon">
+                                            <i class="lnil lnil-cog"></i>
+                                        </div>
+                                        <div class="meta">
+                                            <span>Settings</span>
+                                            <span>Account settings</span>
+                                        </div>
+                                    </a>
+                                    <hr class="dropdown-divider">
+                                    <div class="dropdown-item is-button">
+                                        <button class="button h-button is-primary is-raised is-fullwidth logout-button">
+                                            <span class="icon is-small">
+                                                <i data-feather="log-out"></i>
+                                            </span>
+                                            <span>Logout</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <div id="search-panel" class="right-panel-wrapper is-search is-left">
+            <div class="panel-overlay"></div>
+
+            <div class="right-panel">
+                <div class="right-panel-head">
+                    <img class="light-image" src="./img/logos/logo/logo.svg" alt="" />
+                    <img class="dark-image" src="./img/logos/logo/logo-light.svg" alt="" />
+                    <a class="close-panel">
+                        <i data-feather="chevron-left"></i>
+                    </a>
+                </div>
+                <div class="right-panel-body has-slimscroll">
+                    <div class="field">
+                        <div class="control has-icon">
+                            <input type="text" class="input is-rounded search-input" placeholder="Search...">
+                            <div class="form-icon">
+                                <i data-feather="search"></i>
+                            </div>
+                            <div class="search-results has-slimscroll"></div>
+                        </div>
+                    </div>
+
+                    <div class="recent">
+                        <h4>Recently viewed</h4>
+                        <div class="recent-block">
+                            <a class="media-flex-center">
+                                <div class="h-icon is-info is-rounded is-small">
+                                    <i data-feather="chrome"></i>
+                                </div>
+                                <div class="flex-meta">
+                                    <span>Browser Support</span>
+                                    <span>Blog post</span>
+                                </div>
+                            </a>
+                            <a class="media-flex-center">
+                                <div class="h-icon is-orange is-rounded is-small">
+                                    <i data-feather="tv"></i>
+                                </div>
+                                <div class="flex-meta">
+                                    <span>Twitch API</span>
+                                    <span>Blog post</span>
+                                </div>
+                            </a>
+                            <a class="media-flex-center">
+                                <div class="h-icon is-green is-rounded is-small">
+                                    <i data-feather="twitter"></i>
+                                </div>
+                                <div class="flex-meta">
+                                    <span>Twitter Auth</span>
+                                    <span>Blog post</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="recent">
+                        <h4>Recent Members</h4>
+                        <div class="recent-block">
+                            <a class="media-flex-center">
+                                <div class="h-avatar is-small">
+                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/7.jpg" alt="" data-user-popover="0">
+                                </div>
+                                <div class="flex-meta">
+                                    <span>Alice C.</span>
+                                    <span>Software Engineer</span>
+                                </div>
+                            </a>
+                            <a class="media-flex-center">
+                                <div class="h-avatar is-small">
+                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/13.jpg" alt="" data-user-popover="6">
+                                </div>
+                                <div class="flex-meta">
+                                    <span>Tara S.</span>
+                                    <span>UI/UX Designer</span>
+                                </div>
+                            </a>
+                            <a class="media-flex-center">
+                                <div class="h-avatar is-small">
+                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/22.jpg" alt="" data-user-popover="5">
+                                </div>
+                                <div class="flex-meta">
+                                    <span>Jimmy H.</span>
+                                    <span>Project Manager</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Content Wrapper -->
+        <div id="huro-demo" class="view-wrapper" data-sidebar-open data-naver-offset="342" data-menu-item="#components-sidebar-menu" data-mobile-item="#components-sidebar-menu-mobile">
+
+            <div class="page-content-wrapper">
+                <div class="page-content is-relative">
+
+                    <div class="page-title has-text-centered">
+                        <!-- Sidebar Trigger -->
+                        <div class="huro-hamburger nav-trigger push-resize" data-sidebar="components-sidebar">
+                            <span class="menu-toggle has-chevron">
+                                <span class="icon-box-toggle">
+                                    <span class="rotate">
+                                        <i class="icon-line-top"></i>
+                                        <i class="icon-line-center"></i>
+                                        <i class="icon-line-bottom"></i>
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="title-wrap">
+                            <h1 class="title is-4">Logging Table</h1>
+                        </div>
+
+                        <div class="toolbar ml-auto">
+
+                            <div class="toolbar-link">
+                                <label class="dark-mode ml-auto">
+                                    <input type="checkbox" checked>
+                                    <span></span>
+                                </label>
+                            </div>
+
+                            <div class="toolbar-notifications is-hidden-mobile">
+                                <div class="dropdown is-spaced is-dots is-right dropdown-trigger">
+                                    <div class="is-trigger" aria-haspopup="true">
+                                        <i data-feather="bell"></i>
+                                        <span class="new-indicator pulsate"></span>
+                                    </div>
+                                    <div class="dropdown-menu" role="menu">
+                                        <div class="dropdown-content">
+                                            <div class="heading">
+                                                <div class="heading-left">
+                                                    <h6 class="heading-title">Notifications</h6>
+                                                </div>
+                                                <div class="heading-right">
+                                                    <a class="notification-link" href="admin-profile-notifications.html">See all</a>
+                                                </div>
+                                            </div>
+                                            <ul class="notification-list">
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="img-left">
+                                                            <img class="user-photo" alt="" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/7.jpg" />
+                                                        </div>
+                                                        <div class="user-content">
+                                                            <p class="user-info"><span class="name">Alice C.</span> left a comment.</p>
+                                                            <p class="time">1 hour ago</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="img-left">
+                                                            <img class="user-photo" alt="" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/12.jpg" />
+                                                        </div>
+                                                        <div class="user-content">
+                                                            <p class="user-info"><span class="name">Joshua S.</span> uploaded a file.</p>
+                                                            <p class="time">2 hours ago</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="img-left">
+                                                            <img class="user-photo" alt="" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/13.jpg" />
+                                                        </div>
+                                                        <div class="user-content">
+                                                            <p class="user-info"><span class="name">Tara S.</span> sent you a message.</p>
+                                                            <p class="time">2 hours ago</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="notification-item">
+                                                        <div class="img-left">
+                                                            <img class="user-photo" alt="" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/25.jpg" />
+                                                        </div>
+                                                        <div class="user-content">
+                                                            <p class="user-info"><span class="name">Melany W.</span> left a comment.</p>
+                                                            <p class="time">3 hours ago</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <a class="toolbar-link right-panel-trigger" data-panel="activity-panel">
+                                <i data-feather="log-out"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="page-content-inner">
+
+                        <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+                            <ul>
+                                <li>
+                                    <a href="index-2.html">
+                                        <span class="icon is-small is-solo">
+                                            <i data-feather="home"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="components-hub.html">
+                                        <span>Components</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <span>Logging Table</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <div class="columns">
+                            <div class="column is-12">
+
+                                <!--Flex Table Logging-->
+                                <div class="demo-card has-more-margin">
+                                    <div class="demo-title">
+                                        <h3 class="title is-thin is-5">Flex Table Logging</h3>
+                                        <p>
+                                            Huro provides a custom table component called flex table. It looks like a table but
+                                            is not a Html5 table. Instead, it uses the flexbox technology and is fully
+                                            responsive. You can make it more compact by adding the <code>is-compact</code> class. Check the markup for more details.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex-table is-compact">
+
+                                    <!--Table header-->
+                                    <div class="flex-table-header">
+                                        <span>Company</span>
+                                        <span>Type</span>
+                                        <span>Industry</span>
+                                        <span>Status</span>
+                                        <span>Contacts</span>
+                                        <span class="cell-end">Actions</span>
+                                    </div>
+
+                                    <!--Table item-->
+                                    <div class="flex-table-item">
+                                        <div class="flex-table-cell is-bold" data-th="Company">
+                                            <span class="dark-text">Grubspot</span>
+                                        </div>
+                                        <div class="flex-table-cell" data-th="Type">
+                                            <span class="light-text">New lead</span>
+                                        </div>
+                                        <div class="flex-table-cell" data-th="Industry">
+                                            <span class="light-text">Software</span>
+                                        </div>
+                                        <div class="flex-table-cell" data-th="Status">
+                                            <span class="tag is-success is-rounded">Active</span>
+                                        </div>
+                                        <div class="flex-table-cell" data-th="Contacts">
+                                            <div class="avatar-stack is-pushed-mobile">
+                                                <div class="h-avatar is-small">
+                                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/7.jpg" alt="">
+                                                </div>
+                                                <div class="h-avatar is-small">
+                                                    <span class="avatar is-fake is-info">
+                                                        <span>JD</span>
+                                                    </span>
+                                                </div>
+                                                <div class="h-avatar is-small">
+                                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/8.jpg" alt="">
+                                                </div>
+                                                <div class="h-avatar is-small">
+                                                    <span class="avatar is-more">
+                                                        <span class="inner">
+                                                            <span>+2</span>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-table-cell cell-end" data-th="Actions">
+                                            <div class="dropdown is-spaced is-dots is-right dropdown-trigger is-pushed-mobile">
+                                                <div class="is-trigger" aria-haspopup="true">
+                                                    <i data-feather="more-vertical"></i>
+                                                </div>
+                                                <div class="dropdown-menu" role="menu">
+                                                    <div class="dropdown-content">
+                                                        <a href="#" class="dropdown-item is-media">
+                                                            <div class="icon">
+                                                                <i class="lnil lnil-eye"></i>
+                                                            </div>
+                                                            <div class="meta">
+                                                                <span>View</span>
+                                                                <span>View company details</span>
+                                                            </div>
+                                                        </a>
+                                                        <a href="#" class="dropdown-item is-media">
+                                                            <div class="icon">
+                                                                <i class="lnil lnil-dollar-up"></i>
+                                                            </div>
+                                                            <div class="meta">
+                                                                <span>Deal</span>
+                                                                <span>Start a new deal</span>
+                                                            </div>
+                                                        </a>
+                                                        <a href="#" class="dropdown-item is-media">
+                                                            <div class="icon">
+                                                                <i class="lnil lnil-calendar"></i>
+                                                            </div>
+                                                            <div class="meta">
+                                                                <span>Schedule</span>
+                                                                <span>Schedule a call</span>
+                                                            </div>
+                                                        </a>
+                                                        <hr class="dropdown-divider">
+                                                        <a href="#" class="dropdown-item is-media">
+                                                            <div class="icon">
+                                                                <i class="lnil lnil-trash-can-alt"></i>
+                                                            </div>
+                                                            <div class="meta">
+                                                                <span>Remove</span>
+                                                                <span>Remove from list</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Table item-->
+                                    <div class="flex-table-item">
+                                        <div class="flex-table-cell is-bold" data-th="Company">
+                                            <span class="dark-text">PhaseBit</span>
+                                        </div>
+                                        <div class="flex-table-cell" data-th="Type">
+                                            <span class="light-text">Confirmed</span>
+                                        </div>
+                                        <div class="flex-table-cell" data-th="Industry">
+                                            <span class="light-text">Cryptocurrency</span>
+                                        </div>
+                                        <div class="flex-table-cell" data-th="Status">
+                                            <span class="tag is-info is-rounded">New</span>
+                                        </div>
+                                        <div class="flex-table-cell" data-th="Contacts">
+                                            <div class="avatar-stack is-pushed-mobile">
+                                                <div class="h-avatar is-small">
+                                                    <span class="avatar is-fake is-danger">
+                                                        <span>SC</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-table-cell cell-end" data-th="Actions">
+                                            <div class="dropdown is-spaced is-dots is-right dropdown-trigger is-pushed-mobile">
+                                                <div class="is-trigger" aria-haspopup="true">
+                                                    <i data-feather="more-vertical"></i>
+                                                </div>
+                                                <div class="dropdown-menu" role="menu">
+                                                    <div class="dropdown-content">
+                                                        <a href="#" class="dropdown-item is-media">
+                                                            <div class="icon">
+                                                                <i class="lnil lnil-eye"></i>
+                                                            </div>
+                                                            <div class="meta">
+                                                                <span>View</span>
+                                                                <span>View company details</span>
+                                                            </div>
+                                                        </a>
+                                                        <a href="#" class="dropdown-item is-media">
+                                                            <div class="icon">
+                                                                <i class="lnil lnil-dollar-up"></i>
+                                                            </div>
+                                                            <div class="meta">
+                                                                <span>Deal</span>
+                                                                <span>Start a new deal</span>
+                                                            </div>
+                                                        </a>
+                                                        <a href="#" class="dropdown-item is-media">
+                                                            <div class="icon">
+                                                                <i class="lnil lnil-calendar"></i>
+                                                            </div>
+                                                            <div class="meta">
+                                                                <span>Schedule</span>
+                                                                <span>Schedule a call</span>
+                                                            </div>
+                                                        </a>
+                                                        <hr class="dropdown-divider">
+                                                        <a href="#" class="dropdown-item is-media">
+                                                            <div class="icon">
+                                                                <i class="lnil lnil-trash-can-alt"></i>
+                                                            </div>
+                                                            <div class="meta">
+                                                                <span>Remove</span>
+                                                                <span>Remove from list</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Table item-->
+                                    <div class="flex-table-item">
+                                        <div class="flex-table-cell is-bold" data-th="Company">
+                                            <span class="dark-text">Kokolint</span>
+                                        </div>
+                                        <div class="flex-table-cell" data-th="Type">
+                                            <span class="light-text">New lead</span>
+                                        </div>
+                                        <div class="flex-table-cell" data-th="Industry">
+                                            <span class="light-text">Software</span>
+                                        </div>
+                                        <div class="flex-table-cell" data-th="Status">
+                                            <span class="tag is-success is-rounded">Active</span>
+                                        </div>
+                                        <div class="flex-table-cell" data-th="Contacts">
+                                            <div class="avatar-stack is-pushed-mobile">
+                                                <div class="h-avatar is-small">
+                                                    <span class="avatar is-fake is-success">
+                                                        <span>BT</span>
+                                                    </span>
+                                                </div>
+                                                <div class="h-avatar is-small">
+                                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/12.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-table-cell cell-end" data-th="Actions">
+                                            <div class="dropdown is-spaced is-dots is-right dropdown-trigger is-pushed-mobile">
+                                                <div class="is-trigger" aria-haspopup="true">
+                                                    <i data-feather="more-vertical"></i>
+                                                </div>
+                                                <div class="dropdown-menu" role="menu">
+                                                    <div class="dropdown-content">
+                                                        <a href="#" class="dropdown-item is-media">
+                                                            <div class="icon">
+                                                                <i class="lnil lnil-eye"></i>
+                                                            </div>
+                                                            <div class="meta">
+                                                                <span>View</span>
+                                                                <span>View company details</span>
+                                                            </div>
+                                                        </a>
+                                                        <a href="#" class="dropdown-item is-media">
+                                                            <div class="icon">
+                                                                <i class="lnil lnil-dollar-up"></i>
+                                                            </div>
+                                                            <div class="meta">
+                                                                <span>Deal</span>
+                                                                <span>Start a new deal</span>
+                                                            </div>
+                                                        </a>
+                                                        <a href="#" class="dropdown-item is-media">
+                                                            <div class="icon">
+                                                                <i class="lnil lnil-calendar"></i>
+                                                            </div>
+                                                            <div class="meta">
+                                                                <span>Schedule</span>
+                                                                <span>Schedule a call</span>
+                                                            </div>
+                                                        </a>
+                                                        <hr class="dropdown-divider">
+                                                        <a href="#" class="dropdown-item is-media">
+                                                            <div class="icon">
+                                                                <i class="lnil lnil-trash-can-alt"></i>
+                                                            </div>
+                                                            <div class="meta">
+                                                                <span>Remove</span>
+                                                                <span>Remove from list</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Table item-->
+                                    <div class="flex-table-item">
+                                        <div class="flex-table-cell is-bold" data-th="Company">
+                                            <span class="dark-text">VScope X</span>
+                                        </div>
+                                        <div class="flex-table-cell" data-th="Type">
+                                            <span class="light-text">Canceled</span>
+                                        </div>
+                                        <div class="flex-table-cell" data-th="Industry">
+                                            <span class="light-text">Software</span>
+                                        </div>
+                                        <div class="flex-table-cell" data-th="Status">
+                                            <span class="tag is-rounded">Disabled</span>
+                                        </div>
+                                        <div class="flex-table-cell" data-th="Contacts">
+                                            <div class="avatar-stack is-pushed-mobile">
+                                                <div class="h-avatar is-small">
+                                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/21.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-table-cell cell-end" data-th="Actions">
+                                            <div class="dropdown is-spaced is-dots is-right dropdown-trigger is-pushed-mobile">
+                                                <div class="is-trigger" aria-haspopup="true">
+                                                    <i data-feather="more-vertical"></i>
+                                                </div>
+                                                <div class="dropdown-menu" role="menu">
+                                                    <div class="dropdown-content">
+                                                        <a href="#" class="dropdown-item is-media">
+                                                            <div class="icon">
+                                                                <i class="lnil lnil-eye"></i>
+                                                            </div>
+                                                            <div class="meta">
+                                                                <span>View</span>
+                                                                <span>View company details</span>
+                                                            </div>
+                                                        </a>
+                                                        <a href="#" class="dropdown-item is-media">
+                                                            <div class="icon">
+                                                                <i class="lnil lnil-dollar-up"></i>
+                                                            </div>
+                                                            <div class="meta">
+                                                                <span>Deal</span>
+                                                                <span>Start a new deal</span>
+                                                            </div>
+                                                        </a>
+                                                        <a href="#" class="dropdown-item is-media">
+                                                            <div class="icon">
+                                                                <i class="lnil lnil-calendar"></i>
+                                                            </div>
+                                                            <div class="meta">
+                                                                <span>Schedule</span>
+                                                                <span>Schedule a call</span>
+                                                            </div>
+                                                        </a>
+                                                        <hr class="dropdown-divider">
+                                                        <a href="#" class="dropdown-item is-media">
+                                                            <div class="icon">
+                                                                <i class="lnil lnil-trash-can-alt"></i>
+                                                            </div>
+                                                            <div class="meta">
+                                                                <span>Remove</span>
+                                                                <span>Remove from list</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Table item-->
+                                    <div class="flex-table-item">
+                                        <div class="flex-table-cell is-bold" data-th="Company">
+                                            <span class="dark-text">MediHelp</span>
+                                        </div>
+                                        <div class="flex-table-cell" data-th="Type">
+                                            <span class="light-text">Confirmed</span>
+                                        </div>
+                                        <div class="flex-table-cell" data-th="Industry">
+                                            <span class="light-text">Software</span>
+                                        </div>
+                                        <div class="flex-table-cell" data-th="Status">
+                                            <span class="tag is-rounded is-danger">Suspended</span>
+                                        </div>
+                                        <div class="flex-table-cell" data-th="Contacts">
+                                            <div class="avatar-stack is-pushed-mobile">
+                                                <div class="h-avatar is-small">
+                                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/5.jpg" alt="">
+                                                </div>
+                                                <div class="h-avatar is-small">
+                                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/9.jpg" alt="">
+                                                </div>
+                                                <div class="h-avatar is-small">
+                                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/11.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-table-cell cell-end" data-th="Actions">
+                                            <div class="dropdown is-spaced is-dots is-right dropdown-trigger is-pushed-mobile">
+                                                <div class="is-trigger" aria-haspopup="true">
+                                                    <i data-feather="more-vertical"></i>
+                                                </div>
+                                                <div class="dropdown-menu" role="menu">
+                                                    <div class="dropdown-content">
+                                                        <a href="#" class="dropdown-item is-media">
+                                                            <div class="icon">
+                                                                <i class="lnil lnil-eye"></i>
+                                                            </div>
+                                                            <div class="meta">
+                                                                <span>View</span>
+                                                                <span>View company details</span>
+                                                            </div>
+                                                        </a>
+                                                        <a href="#" class="dropdown-item is-media">
+                                                            <div class="icon">
+                                                                <i class="lnil lnil-dollar-up"></i>
+                                                            </div>
+                                                            <div class="meta">
+                                                                <span>Deal</span>
+                                                                <span>Start a new deal</span>
+                                                            </div>
+                                                        </a>
+                                                        <a href="#" class="dropdown-item is-media">
+                                                            <div class="icon">
+                                                                <i class="lnil lnil-calendar"></i>
+                                                            </div>
+                                                            <div class="meta">
+                                                                <span>Schedule</span>
+                                                                <span>Schedule a call</span>
+                                                            </div>
+                                                        </a>
+                                                        <hr class="dropdown-divider">
+                                                        <a href="#" class="dropdown-item is-media">
+                                                            <div class="icon">
+                                                                <i class="lnil lnil-trash-can-alt"></i>
+                                                            </div>
+                                                            <div class="meta">
+                                                                <span>Remove</span>
+                                                                <span>Remove from list</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!--Table Pagination-->
+                                <nav class="flex-pagination pagination is-rounded" aria-label="pagination">
+                                    <a class="pagination-previous">Previous</a>
+                                    <a class="pagination-next">Next</a>
+                                    <ul class="pagination-list">
+                                        <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+                                        <li><span class="pagination-ellipsis">&hellip;</span></li>
+                                        <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+                                        <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+                                        <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+                                        <li><span class="pagination-ellipsis">&hellip;</span></li>
+                                        <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+                                    </ul>
+                                </nav>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Concatenated plugins -->
+        <script src="./js/app.js"></script>
+
+        <!-- Huro js -->
+        <script src="./js/functions.js"></script>
+        <script src="./js/main.js"></script>
+        <script src="./js/components.js"></script>
+        <script src="./js/popover.js"></script>
+        <script src="./js/widgets.js"></script>
+
+
+        <!-- Additional Features -->
+        <script src="./js/touch.js"></script>
+        <script src="./js/syntax.js"></script>
+    </div>
+</body>
+</html>

@@ -22,5 +22,11 @@
     "inputFiles": [
       "wwwroot/dist/main.js"
     ]
+  },
+  {
+    "outputFileName": "wwwroot/dist/icons/font-awesome-old/css/font-awesome.min.css",
+    "inputFiles": [
+      "wwwroot/dist/icons/font-awesome-old/css/font-awesome.min.css"
+    ]
   }
 ]

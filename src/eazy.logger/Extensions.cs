@@ -87,7 +87,7 @@ namespace eazy.logger
                                           $"Integrated Security={databaseOptions.IntegratedSecurity};" +
                                           $"User ID={databaseOptions.UserName};" +
                                           $"Password={databaseOptions.Password}",
-                        sinkOptions: new MSSqlServerSinkOptions { TableName = $"{databaseOptions.Table}" }
+                        sinkOptions: new MSSqlServerSinkOptions { TableName = $"{databaseOptions.Table}", AutoCreateSqlTable= true }
                         );
             });
         }

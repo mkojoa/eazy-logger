@@ -1,900 +1,959 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Required meta tags  -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-    <title> Eazy Logger UI</title>
-    <link rel="icon" type="image/png" href="./img/favicon.png" />
-
-    <!--Core CSS -->
-    <link rel="stylesheet" href="./css/app.css">
-    <link rel="stylesheet" href="./css/main.css">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Eazy Logger UI </title>
+	<!-- Favicon icon -->
+	<link rel="icon" type="image/png" href="./img/favicon.png" />
+	<link href="./vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
+	<link href="./css/bootstrap-select.min.css" rel="stylesheet">
+	<link href="./css/font-awesome.min.css" rel="stylesheet">
+	<link href="./css/style.css" rel="stylesheet">
+	<link href="./css/LineIcons.css" rel="stylesheet">
+	<!-- Datatable -->
+	<link href="./css/jquery.dataTables.min.css" rel="stylesheet">
 
 </head>
 
 <body>
-    <div id="huro-app" class="app-wrapper">
 
-        <div class="app-overlay"></div>
+	<!--*******************
+		Preloader start
+	********************-->
+	<div id="preloader">
+		<div class="sk-three-bounce">
+			<div class="sk-child sk-bounce1"></div>
+			<div class="sk-child sk-bounce2"></div>
+			<div class="sk-child sk-bounce3"></div>
+		</div>
+	</div>
+	<!--*******************
+		Preloader end
+	********************-->
+	<!--**********************************
+		Main wrapper start
+	***********************************-->
+	<div id="main-wrapper">
 
-        <!-- Pageloader -->
-        <div class="pageloader"></div>
-        <div class="infraloader is-active"></div>
-        <nav class="navbar mobile-navbar no-shadow is-hidden-desktop is-hidden-tablet" aria-label="main navigation">
-            <div class="container">
-                <!-- Brand -->
-                <div class="navbar-brand">
-                    <!-- Mobile menu toggler icon -->
-                    <div class="brand-start">
-                        <div class="navbar-burger">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
+		<!--**********************************
+			Nav header start
+		***********************************-->
+		<div class="nav-header">
+			<a href="index.html" class="brand-logo">
+				<img class="logo-abbr" src="images/logo-white.png" alt="">
+				<img class="logo-compact" src="images/logo-text-white.png" alt="">
+				<img class="brand-title" src="images/logo-text-white.png" alt="">
+			</a>
 
-                    <a class="navbar-item is-brand" href="index.html">
-                        <img class="light-image" src="./img/logos/logo/logo.svg" alt="">
-                        <img class="dark-image" src="./img/logos/logo/logo-light.svg" alt="">
-                    </a>
+			<div class="nav-control">
+				<div class="hamburger">
+					<span class="line"></span><span class="line"></span><span class="line"></span>
+				</div>
+			</div>
+		</div>
+		<!--**********************************
+			Nav header end
+		***********************************-->
+		<!--**********************************
+			Chat box start
+		***********************************-->
+		<div class="chatbox">
+			<div class="chatbox-close"></div>
+			<div class="custom-tab-1">
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#notes">Notes</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#alerts">Alerts</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" data-toggle="tab" href="#chat">Chat</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane fade active show" id="chat" role="tabpanel">
+						<div class="card mb-sm-3 mb-md-0 contacts_card dz-chat-user-box">
+							<div class="card-header chat-list-header text-center">
+								<a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect fill="#000000" x="4" y="11" width="16" height="2" rx="1" /><rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) " x="4" y="11" width="16" height="2" rx="1" /></g></svg></a>
+								<div>
+									<h6 class="mb-1">Chat List</h6>
+									<p class="mb-0">Show All</p>
+								</div>
+								<a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24" /><circle fill="#000000" cx="5" cy="12" r="2" /><circle fill="#000000" cx="12" cy="12" r="2" /><circle fill="#000000" cx="19" cy="12" r="2" /></g></svg></a>
+							</div>
+							<div class="card-body contacts_body p-0 dz-scroll  " id="DZ_W_Contacts_Body">
+								<ul class="contacts">
+									<li class="name-first-letter">A</li>
+									<li class="active dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="images/avatar/1.jpg" class="rounded-circle user_img" alt="" />
+												<span class="online_icon"></span>
+											</div>
+											<div class="user_info">
+												<span>Archie Parker</span>
+												<p>Kalid is online</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="images/avatar/2.jpg" class="rounded-circle user_img" alt="" />
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Alfie Mason</span>
+												<p>Taherah left 7 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="images/avatar/3.jpg" class="rounded-circle user_img" alt="" />
+												<span class="online_icon"></span>
+											</div>
+											<div class="user_info">
+												<span>AharlieKane</span>
+												<p>Sami is online</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="images/avatar/4.jpg" class="rounded-circle user_img" alt="" />
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Athan Jacoby</span>
+												<p>Nargis left 30 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="name-first-letter">B</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="images/avatar/5.jpg" class="rounded-circle user_img" alt="" />
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Bashid Samim</span>
+												<p>Rashid left 50 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="images/avatar/1.jpg" class="rounded-circle user_img" alt="" />
+												<span class="online_icon"></span>
+											</div>
+											<div class="user_info">
+												<span>Breddie Ronan</span>
+												<p>Kalid is online</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="images/avatar/2.jpg" class="rounded-circle user_img" alt="" />
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Ceorge Carson</span>
+												<p>Taherah left 7 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="name-first-letter">D</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="images/avatar/3.jpg" class="rounded-circle user_img" alt="" />
+												<span class="online_icon"></span>
+											</div>
+											<div class="user_info">
+												<span>Darry Parker</span>
+												<p>Sami is online</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="images/avatar/4.jpg" class="rounded-circle user_img" alt="" />
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Denry Hunter</span>
+												<p>Nargis left 30 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="name-first-letter">J</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="images/avatar/5.jpg" class="rounded-circle user_img" alt="" />
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Jack Ronan</span>
+												<p>Rashid left 50 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="images/avatar/1.jpg" class="rounded-circle user_img" alt="" />
+												<span class="online_icon"></span>
+											</div>
+											<div class="user_info">
+												<span>Jacob Tucker</span>
+												<p>Kalid is online</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="images/avatar/2.jpg" class="rounded-circle user_img" alt="" />
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>James Logan</span>
+												<p>Taherah left 7 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="images/avatar/3.jpg" class="rounded-circle user_img" alt="" />
+												<span class="online_icon"></span>
+											</div>
+											<div class="user_info">
+												<span>Joshua Weston</span>
+												<p>Sami is online</p>
+											</div>
+										</div>
+									</li>
+									<li class="name-first-letter">O</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="images/avatar/4.jpg" class="rounded-circle user_img" alt="" />
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Oliver Acker</span>
+												<p>Nargis left 30 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="images/avatar/5.jpg" class="rounded-circle user_img" alt="" />
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Oscar Weston</span>
+												<p>Rashid left 50 mins ago</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="card chat dz-chat-history-box d-none">
+							<div class="card-header chat-list-header text-center">
+								<a href="#" class="dz-chat-history-back">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon points="0 0 24 0 24 24 0 24" /><rect fill="#000000" opacity="0.3" transform="translate(15.000000, 12.000000) scale(-1, 1) rotate(-90.000000) translate(-15.000000, -12.000000) " x="14" y="7" width="2" height="10" rx="1" /><path d="M3.7071045,15.7071045 C3.3165802,16.0976288 2.68341522,16.0976288 2.29289093,15.7071045 C1.90236664,15.3165802 1.90236664,14.6834152 2.29289093,14.2928909 L8.29289093,8.29289093 C8.67146987,7.914312 9.28105631,7.90106637 9.67572234,8.26284357 L15.6757223,13.7628436 C16.0828413,14.136036 16.1103443,14.7686034 15.7371519,15.1757223 C15.3639594,15.5828413 14.7313921,15.6103443 14.3242731,15.2371519 L9.03007346,10.3841355 L3.7071045,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(9.000001, 11.999997) scale(-1, -1) rotate(90.000000) translate(-9.000001, -11.999997) " /></g></svg>
+								</a>
+								<div>
+									<h6 class="mb-1">Chat with Khelesh</h6>
+									<p class="mb-0 text-success">Online</p>
+								</div>
+								<div class="dropdown">
+									<a href="#" data-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24" /><circle fill="#000000" cx="5" cy="12" r="2" /><circle fill="#000000" cx="12" cy="12" r="2" /><circle fill="#000000" cx="19" cy="12" r="2" /></g></svg></a>
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li class="dropdown-item"><i class="fa fa-user-circle text-primary mr-2"></i> View profile</li>
+										<li class="dropdown-item"><i class="fa fa-users text-primary mr-2"></i> Add to close friends</li>
+										<li class="dropdown-item"><i class="fa fa-plus text-primary mr-2"></i> Add to group</li>
+										<li class="dropdown-item"><i class="fa fa-ban text-primary mr-2"></i> Block</li>
+									</ul>
+								</div>
+							</div>
+							<div class="card-body msg_card_body dz-scroll" id="DZ_W_Contacts_Body3">
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="" />
+									</div>
+									<div class="msg_cotainer">
+										Hi, how are you samim?
+										<span class="msg_time">8:40 AM, Today</span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-end mb-4">
+									<div class="msg_cotainer_send">
+										Hi Khalid i am good tnx how about you?
+										<span class="msg_time_send">8:55 AM, Today</span>
+									</div>
+									<div class="img_cont_msg">
+										<img src="images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="" />
+									</div>
+								</div>
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="" />
+									</div>
+									<div class="msg_cotainer">
+										I am good too, thank you for your chat template
+										<span class="msg_time">9:00 AM, Today</span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-end mb-4">
+									<div class="msg_cotainer_send">
+										You are welcome
+										<span class="msg_time_send">9:05 AM, Today</span>
+									</div>
+									<div class="img_cont_msg">
+										<img src="images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="" />
+									</div>
+								</div>
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="" />
+									</div>
+									<div class="msg_cotainer">
+										I am looking for your next templates
+										<span class="msg_time">9:07 AM, Today</span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-end mb-4">
+									<div class="msg_cotainer_send">
+										Ok, thank you have a good day
+										<span class="msg_time_send">9:10 AM, Today</span>
+									</div>
+									<div class="img_cont_msg">
+										<img src="images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="" />
+									</div>
+								</div>
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="" />
+									</div>
+									<div class="msg_cotainer">
+										Bye, see you
+										<span class="msg_time">9:12 AM, Today</span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="" />
+									</div>
+									<div class="msg_cotainer">
+										Hi, how are you samim?
+										<span class="msg_time">8:40 AM, Today</span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-end mb-4">
+									<div class="msg_cotainer_send">
+										Hi Khalid i am good tnx how about you?
+										<span class="msg_time_send">8:55 AM, Today</span>
+									</div>
+									<div class="img_cont_msg">
+										<img src="images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="" />
+									</div>
+								</div>
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="" />
+									</div>
+									<div class="msg_cotainer">
+										I am good too, thank you for your chat template
+										<span class="msg_time">9:00 AM, Today</span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-end mb-4">
+									<div class="msg_cotainer_send">
+										You are welcome
+										<span class="msg_time_send">9:05 AM, Today</span>
+									</div>
+									<div class="img_cont_msg">
+										<img src="images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="" />
+									</div>
+								</div>
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="" />
+									</div>
+									<div class="msg_cotainer">
+										I am looking for your next templates
+										<span class="msg_time">9:07 AM, Today</span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-end mb-4">
+									<div class="msg_cotainer_send">
+										Ok, thank you have a good day
+										<span class="msg_time_send">9:10 AM, Today</span>
+									</div>
+									<div class="img_cont_msg">
+										<img src="images/avatar/2.jpg" class="rounded-circle user_img_msg" alt="" />
+									</div>
+								</div>
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="images/avatar/1.jpg" class="rounded-circle user_img_msg" alt="" />
+									</div>
+									<div class="msg_cotainer">
+										Bye, see you
+										<span class="msg_time">9:12 AM, Today</span>
+									</div>
+								</div>
+							</div>
+							<div class="card-footer type_msg">
+								<div class="input-group">
+									<textarea class="form-control" placeholder="Type your message..."></textarea>
+									<div class="input-group-append">
+										<button type="button" class="btn btn-primary"><i class="fa fa-location-arrow"></i></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="alerts" role="tabpanel">
+						<div class="card mb-sm-3 mb-md-0 contacts_card">
+							<div class="card-header chat-list-header text-center">
+								<a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24" /><circle fill="#000000" cx="5" cy="12" r="2" /><circle fill="#000000" cx="12" cy="12" r="2" /><circle fill="#000000" cx="19" cy="12" r="2" /></g></svg></a>
+								<div>
+									<h6 class="mb-1">Notications</h6>
+									<p class="mb-0">Show All</p>
+								</div>
+								<a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24" /><path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" /><path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000" fill-rule="nonzero" /></g></svg></a>
+							</div>
+							<div class="card-body contacts_body p-0 dz-scroll" id="DZ_W_Contacts_Body1">
+								<ul class="contacts">
+									<li class="name-first-letter">SEVER STATUS</li>
+									<li class="active">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont primary">KK</div>
+											<div class="user_info">
+												<span>David Nester Birthday</span>
+												<p class="text-primary">Today</p>
+											</div>
+										</div>
+									</li>
+									<li class="name-first-letter">SOCIAL</li>
+									<li>
+										<div class="d-flex bd-highlight">
+											<div class="img_cont success">RU<i class="icon fa-birthday-cake"></i></div>
+											<div class="user_info">
+												<span>Perfection Simplified</span>
+												<p>Jame Smith commented on your status</p>
+											</div>
+										</div>
+									</li>
+									<li class="name-first-letter">SEVER STATUS</li>
+									<li>
+										<div class="d-flex bd-highlight">
+											<div class="img_cont primary">AU<i class="icon fa fa-user-plus"></i></div>
+											<div class="user_info">
+												<span>AharlieKane</span>
+												<p>Sami is online</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="d-flex bd-highlight">
+											<div class="img_cont info">MO<i class="icon fa fa-user-plus"></i></div>
+											<div class="user_info">
+												<span>Athan Jacoby</span>
+												<p>Nargis left 30 mins ago</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="card-footer"></div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="notes">
+						<div class="card mb-sm-3 mb-md-0 note_card">
+							<div class="card-header chat-list-header text-center">
+								<a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect fill="#000000" x="4" y="11" width="16" height="2" rx="1" /><rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) " x="4" y="11" width="16" height="2" rx="1" /></g></svg></a>
+								<div>
+									<h6 class="mb-1">Notes</h6>
+									<p class="mb-0">Add New Nots</p>
+								</div>
+								<a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24" /><path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" /><path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000" fill-rule="nonzero" /></g></svg></a>
+							</div>
+							<div class="card-body contacts_body p-0 dz-scroll" id="DZ_W_Contacts_Body2">
+								<ul class="contacts">
+									<li class="active">
+										<div class="d-flex bd-highlight">
+											<div class="user_info">
+												<span>New order placed..</span>
+												<p>10 Aug 2020</p>
+											</div>
+											<div class="ml-auto">
+												<a href="#" class="btn btn-primary btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+												<a href="#" class="btn btn-danger btn-xs sharp"><i class="fa fa-trash"></i></a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="d-flex bd-highlight">
+											<div class="user_info">
+												<span>Youtube, a video-sharing website..</span>
+												<p>10 Aug 2020</p>
+											</div>
+											<div class="ml-auto">
+												<a href="#" class="btn btn-primary btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+												<a href="#" class="btn btn-danger btn-xs sharp"><i class="fa fa-trash"></i></a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="d-flex bd-highlight">
+											<div class="user_info">
+												<span>john just buy your product..</span>
+												<p>10 Aug 2020</p>
+											</div>
+											<div class="ml-auto">
+												<a href="#" class="btn btn-primary btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+												<a href="#" class="btn btn-danger btn-xs sharp"><i class="fa fa-trash"></i></a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="d-flex bd-highlight">
+											<div class="user_info">
+												<span>Athan Jacoby</span>
+												<p>10 Aug 2020</p>
+											</div>
+											<div class="ml-auto">
+												<a href="#" class="btn btn-primary btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+												<a href="#" class="btn btn-danger btn-xs sharp"><i class="fa fa-trash"></i></a>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--**********************************
+			Chat box End
+		***********************************-->
+		<!--**********************************
+			Header start
+		***********************************-->
+		<div class="header">
+			<div class="header-content">
+				<nav class="navbar navbar-expand">
+					<div class="collapse navbar-collapse justify-content-between">
+						<div class="header-left">
+							<div class="search_bar dropdown">
 
-                    <div class="brand-end">
-                        <div class="navbar-item has-dropdown is-notification is-hidden-tablet is-hidden-desktop">
-                            <a class="navbar-link is-arrowless" href="javascript:void(0);">
-                                <i data-feather="bell"></i>
-                                <span class="new-indicator pulsate"></span>
-                            </a>
-                            <div class="navbar-dropdown is-boxed is-right">
-                                <div class="heading">
-                                    <div class="heading-left">
-                                        <h6 class="heading-title">Notifications</h6>
-                                    </div>
-                                    <div class="heading-right">
-                                        <a class="notification-link" href="#">See all</a>
-                                    </div>
-                                </div>
-                                <div class="inner has-slimscroll">
+							</div>
+						</div>
 
-                                    <ul class="notification-list">
-                                        <li>
-                                            <a class="notification-item">
-                                                <div class="img-left">
-                                                    <img class="user-photo" alt="" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/7.jpg" />
-                                                </div>
-                                                <div class="user-content">
-                                                    <p class="user-info"><span class="name">Alice C.</span> left a comment.</p>
-                                                    <p class="time">1 hour ago</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="notification-item">
-                                                <div class="img-left">
-                                                    <img class="user-photo" alt="" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/12.jpg" />
-                                                </div>
-                                                <div class="user-content">
-                                                    <p class="user-info"><span class="name">Joshua S.</span> uploaded a file.</p>
-                                                    <p class="time">2 hours ago</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="notification-item">
-                                                <div class="img-left">
-                                                    <img class="user-photo" alt="" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/13.jpg" />
-                                                </div>
-                                                <div class="user-content">
-                                                    <p class="user-info"><span class="name">Tara S.</span> sent you a message.</p>
-                                                    <p class="time">2 hours ago</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="notification-item">
-                                                <div class="img-left">
-                                                    <img class="user-photo" alt="" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/25.jpg" />
-                                                </div>
-                                                <div class="user-content">
-                                                    <p class="user-info"><span class="name">Melany W.</span> left a comment.</p>
-                                                    <p class="time">3 hours ago</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dropdown is-right is-spaced dropdown-trigger user-dropdown">
-                            <div class="is-trigger" aria-haspopup="true">
-                                <div class="profile-avatar">
-                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/8.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="dropdown-menu" role="menu">
-                                <div class="dropdown-content">
-                                    <div class="dropdown-head">
-                                        <div class="h-avatar is-large">
-                                            <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/8.jpg" alt="">
-                                        </div>
-                                        <div class="meta">
-                                            <span>Erik Kovalsky</span>
-                                            <span>Product Manager</span>
-                                        </div>
-                                    </div>
-                                    <a href="#" class="dropdown-item is-media">
-                                        <div class="icon">
-                                            <i class="lnil lnil-user-alt"></i>
-                                        </div>
-                                        <div class="meta">
-                                            <span>Profile</span>
-                                            <span>View your profile</span>
-                                        </div>
-                                    </a>
-                                    <a class="dropdown-item is-media layout-switcher">
-                                        <div class="icon">
-                                            <i class="lnil lnil-layout"></i>
-                                        </div>
-                                        <div class="meta">
-                                            <span>Layout</span>
-                                            <span>Switch to admin/webapp</span>
-                                        </div>
-                                    </a>
-                                    <hr class="dropdown-divider">
-                                    <a href="#" class="dropdown-item is-media">
-                                        <div class="icon">
-                                            <i class="lnil lnil-briefcase"></i>
-                                        </div>
-                                        <div class="meta">
-                                            <span>Projects</span>
-                                            <span>All my projects</span>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="dropdown-item is-media">
-                                        <div class="icon">
-                                            <i class="lnil lnil-users-alt"></i>
-                                        </div>
-                                        <div class="meta">
-                                            <span>Team</span>
-                                            <span>Manage your team</span>
-                                        </div>
-                                    </a>
-                                    <hr class="dropdown-divider">
-                                    <a href="#" class="dropdown-item is-media">
-                                        <div class="icon">
-                                            <i class="lnil lnil-cog"></i>
-                                        </div>
-                                        <div class="meta">
-                                            <span>Settings</span>
-                                            <span>Account settings</span>
-                                        </div>
-                                    </a>
-                                    <hr class="dropdown-divider">
-                                    <div class="dropdown-item is-button">
-                                        <button class="button h-button is-primary is-raised is-fullwidth logout-button">
-                                            <span class="icon is-small">
-                                                <i data-feather="log-out"></i>
-                                            </span>
-                                            <span>Logout</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </nav>
-       
-        <div id="circular-menu" class="circular-menu">
-
-            <a class="floating-btn" onclick="document.getElementById('circular-menu').classList.toggle('active');">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-times"></i>
-            </a>
-
-            <div class="items-wrapper">
-                <div class="menu-item is-flex">
-                    <label class="dark-mode">
-                        <input type="checkbox" checked>
-                        <span></span>
-                    </label>
-                </div>
-                <a class="menu-item is-flex right-panel-trigger" data-panel="languages-panel">
-                    <img src="./img/icons/flags/united-states-of-america.svg" alt="">
-                </a>
-                <a class="menu-item is-flex">
-                    <i data-feather="bell"></i>
-                </a>
-                <a class="menu-item is-flex">
-                    <i data-feather="grid"></i>
-                </a>
-            </div>
-
-        </div>
-
-        <div id="search-panel" class="right-panel-wrapper is-search is-left">
-            <div class="panel-overlay"></div>
-
-            <div class="right-panel">
-                <div class="right-panel-head">
-                    <img class="light-image" src="./img/logos/logo/logo.svg" alt="" />
-                    <img class="dark-image" src="./img/logos/logo/logo-light.svg" alt="" />
-                    <a class="close-panel">
-                        <i data-feather="chevron-left"></i>
-                    </a>
-                </div>
-                <div class="right-panel-body has-slimscroll">
-                    <div class="field">
-                        <div class="control has-icon">
-                            <input type="text" class="input is-rounded search-input" placeholder="Search...">
-                            <div class="form-icon">
-                                <i data-feather="search"></i>
-                            </div>
-                            <div class="search-results has-slimscroll"></div>
-                        </div>
-                    </div>
-
-                    <div class="recent">
-                        <h4>Recently viewed</h4>
-                        <div class="recent-block">
-                            <a class="media-flex-center">
-                                <div class="h-icon is-info is-rounded is-small">
-                                    <i data-feather="chrome"></i>
-                                </div>
-                                <div class="flex-meta">
-                                    <span>Browser Support</span>
-                                    <span>Blog post</span>
-                                </div>
-                            </a>
-                            <a class="media-flex-center">
-                                <div class="h-icon is-orange is-rounded is-small">
-                                    <i data-feather="tv"></i>
-                                </div>
-                                <div class="flex-meta">
-                                    <span>Twitch API</span>
-                                    <span>Blog post</span>
-                                </div>
-                            </a>
-                            <a class="media-flex-center">
-                                <div class="h-icon is-green is-rounded is-small">
-                                    <i data-feather="twitter"></i>
-                                </div>
-                                <div class="flex-meta">
-                                    <span>Twitter Auth</span>
-                                    <span>Blog post</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="recent">
-                        <h4>Recent Members</h4>
-                        <div class="recent-block">
-                            <a class="media-flex-center">
-                                <div class="h-avatar is-small">
-                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/7.jpg" alt="" data-user-popover="0">
-                                </div>
-                                <div class="flex-meta">
-                                    <span>Alice C.</span>
-                                    <span>Software Engineer</span>
-                                </div>
-                            </a>
-                            <a class="media-flex-center">
-                                <div class="h-avatar is-small">
-                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/13.jpg" alt="" data-user-popover="6">
-                                </div>
-                                <div class="flex-meta">
-                                    <span>Tara S.</span>
-                                    <span>UI/UX Designer</span>
-                                </div>
-                            </a>
-                            <a class="media-flex-center">
-                                <div class="h-avatar is-small">
-                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/22.jpg" alt="" data-user-popover="5">
-                                </div>
-                                <div class="flex-meta">
-                                    <span>Jimmy H.</span>
-                                    <span>Project Manager</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <!-- Content Wrapper -->
-        <div id="huro-demo" class="view-wrapper" data-sidebar-open data-naver-offset="342" data-menu-item="#components-sidebar-menu" data-mobile-item="#components-sidebar-menu-mobile">
-
-            <div class="page-content-wrapper">
-                <div class="page-content is-relative">
-
-                    <div class="page-title has-text-centered">
-                        <!-- Sidebar Trigger -->
-                        <div class="huro-hamburger nav-trigger push-resize" data-sidebar="components-sidebar">
-                            <span class="menu-toggle has-chevron">
-                                <span class="icon-box-toggle">
-                                    <span class="rotate">
-                                        <i class="icon-line-top"></i>
-                                        <i class="icon-line-center"></i>
-                                        <i class="icon-line-bottom"></i>
-                                    </span>
-                                </span>
-                            </span>
-                        </div>
-
-                        <div class="title-wrap">
-                            <h1 class="title is-4">Compact Table</h1>
-                        </div>
-
-                        <div class="toolbar ml-auto">
-
-                            <div class="toolbar-link">
-                                <label class="dark-mode ml-auto">
-                                    <input type="checkbox" checked>
-                                    <span></span>
-                                </label>
-                            </div>
-
-                            <a class="toolbar-link right-panel-trigger" data-panel="languages-panel">
-                                <img src="./img/icons/flags/united-states-of-america.svg" alt="">
-                            </a>
-
-                            <div class="toolbar-notifications is-hidden-mobile">
-                                <div class="dropdown is-spaced is-dots is-right dropdown-trigger">
-                                    <div class="is-trigger" aria-haspopup="true">
-                                        <i data-feather="bell"></i>
-                                        <span class="new-indicator pulsate"></span>
-                                    </div>
-                                    <div class="dropdown-menu" role="menu">
-                                        <div class="dropdown-content">
-                                            <div class="heading">
-                                                <div class="heading-left">
-                                                    <h6 class="heading-title">Notifications</h6>
-                                                </div>
-                                                <div class="heading-right">
-                                                    <a class="notification-link" href="admin-profile-notifications.html">See all</a>
-                                                </div>
-                                            </div>
-                                            <ul class="notification-list">
-                                                <li>
-                                                    <a class="notification-item">
-                                                        <div class="img-left">
-                                                            <img class="user-photo" alt="" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/7.jpg" />
-                                                        </div>
-                                                        <div class="user-content">
-                                                            <p class="user-info"><span class="name">Alice C.</span> left a comment.</p>
-                                                            <p class="time">1 hour ago</p>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="notification-item">
-                                                        <div class="img-left">
-                                                            <img class="user-photo" alt="" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/12.jpg" />
-                                                        </div>
-                                                        <div class="user-content">
-                                                            <p class="user-info"><span class="name">Joshua S.</span> uploaded a file.</p>
-                                                            <p class="time">2 hours ago</p>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="notification-item">
-                                                        <div class="img-left">
-                                                            <img class="user-photo" alt="" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/13.jpg" />
-                                                        </div>
-                                                        <div class="user-content">
-                                                            <p class="user-info"><span class="name">Tara S.</span> sent you a message.</p>
-                                                            <p class="time">2 hours ago</p>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="notification-item">
-                                                        <div class="img-left">
-                                                            <img class="user-photo" alt="" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/25.jpg" />
-                                                        </div>
-                                                        <div class="user-content">
-                                                            <p class="user-info"><span class="name">Melany W.</span> left a comment.</p>
-                                                            <p class="time">3 hours ago</p>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <a class="toolbar-link right-panel-trigger" data-panel="activity-panel">
-                                <i data-feather="grid"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="page-content-inner">
-
-                        <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
-                            <ul>
-                                <li>
-                                    <a href="index-2.html">
-                                        <span class="icon is-small is-solo">
-                                            <i data-feather="home"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="components-hub.html">
-                                        <span>Components</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a>
-                                        <span>Compact Table</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-
-                        <div class="columns">
-                            <div class="column is-12">
-
-                                <!--Flex Table Compact-->
-                                <div class="demo-card has-more-margin">
-                                    <div class="demo-title">
-                                        <h3 class="title is-thin is-5">Flex Table Compact</h3>
-                                        <p>
-                                            Huro provides a custom table component called flex table. It looks like a table but
-                                            is not a Html5 table. Instead, it uses the flexbox technology and is fully
-                                            responsive. You can make it more compact by adding the <code>is-compact</code> class. Check the markup for more details.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="flex-table is-compact">
-
-                                    <!--Table header-->
-                                    <div class="flex-table-header">
-                                        <span>Company</span>
-                                        <span>Type</span>
-                                        <span>Industry</span>
-                                        <span>Status</span>
-                                        <span>Contacts</span>
-                                        <span class="cell-end">Actions</span>
-                                    </div>
-
-                                    <!--Table item-->
-                                    <div class="flex-table-item">
-                                        <div class="flex-table-cell is-bold" data-th="Company">
-                                            <span class="dark-text">Grubspot</span>
-                                        </div>
-                                        <div class="flex-table-cell" data-th="Type">
-                                            <span class="light-text">New lead</span>
-                                        </div>
-                                        <div class="flex-table-cell" data-th="Industry">
-                                            <span class="light-text">Software</span>
-                                        </div>
-                                        <div class="flex-table-cell" data-th="Status">
-                                            <span class="tag is-success is-rounded">Active</span>
-                                        </div>
-                                        <div class="flex-table-cell" data-th="Contacts">
-                                            <div class="avatar-stack is-pushed-mobile">
-                                                <div class="h-avatar is-small">
-                                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/7.jpg" alt="">
-                                                </div>
-                                                <div class="h-avatar is-small">
-                                                    <span class="avatar is-fake is-info">
-                                                        <span>JD</span>
-                                                    </span>
-                                                </div>
-                                                <div class="h-avatar is-small">
-                                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/8.jpg" alt="">
-                                                </div>
-                                                <div class="h-avatar is-small">
-                                                    <span class="avatar is-more">
-                                                        <span class="inner">
-                                                            <span>+2</span>
-                                                        </span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex-table-cell cell-end" data-th="Actions">
-                                            <div class="dropdown is-spaced is-dots is-right dropdown-trigger is-pushed-mobile">
-                                                <div class="is-trigger" aria-haspopup="true">
-                                                    <i data-feather="more-vertical"></i>
-                                                </div>
-                                                <div class="dropdown-menu" role="menu">
-                                                    <div class="dropdown-content">
-                                                        <a href="#" class="dropdown-item is-media">
-                                                            <div class="icon">
-                                                                <i class="lnil lnil-eye"></i>
-                                                            </div>
-                                                            <div class="meta">
-                                                                <span>View</span>
-                                                                <span>View company details</span>
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="dropdown-item is-media">
-                                                            <div class="icon">
-                                                                <i class="lnil lnil-dollar-up"></i>
-                                                            </div>
-                                                            <div class="meta">
-                                                                <span>Deal</span>
-                                                                <span>Start a new deal</span>
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="dropdown-item is-media">
-                                                            <div class="icon">
-                                                                <i class="lnil lnil-calendar"></i>
-                                                            </div>
-                                                            <div class="meta">
-                                                                <span>Schedule</span>
-                                                                <span>Schedule a call</span>
-                                                            </div>
-                                                        </a>
-                                                        <hr class="dropdown-divider">
-                                                        <a href="#" class="dropdown-item is-media">
-                                                            <div class="icon">
-                                                                <i class="lnil lnil-trash-can-alt"></i>
-                                                            </div>
-                                                            <div class="meta">
-                                                                <span>Remove</span>
-                                                                <span>Remove from list</span>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!--Table item-->
-                                    <div class="flex-table-item">
-                                        <div class="flex-table-cell is-bold" data-th="Company">
-                                            <span class="dark-text">PhaseBit</span>
-                                        </div>
-                                        <div class="flex-table-cell" data-th="Type">
-                                            <span class="light-text">Confirmed</span>
-                                        </div>
-                                        <div class="flex-table-cell" data-th="Industry">
-                                            <span class="light-text">Cryptocurrency</span>
-                                        </div>
-                                        <div class="flex-table-cell" data-th="Status">
-                                            <span class="tag is-info is-rounded">New</span>
-                                        </div>
-                                        <div class="flex-table-cell" data-th="Contacts">
-                                            <div class="avatar-stack is-pushed-mobile">
-                                                <div class="h-avatar is-small">
-                                                    <span class="avatar is-fake is-danger">
-                                                        <span>SC</span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex-table-cell cell-end" data-th="Actions">
-                                            <div class="dropdown is-spaced is-dots is-right dropdown-trigger is-pushed-mobile">
-                                                <div class="is-trigger" aria-haspopup="true">
-                                                    <i data-feather="more-vertical"></i>
-                                                </div>
-                                                <div class="dropdown-menu" role="menu">
-                                                    <div class="dropdown-content">
-                                                        <a href="#" class="dropdown-item is-media">
-                                                            <div class="icon">
-                                                                <i class="lnil lnil-eye"></i>
-                                                            </div>
-                                                            <div class="meta">
-                                                                <span>View</span>
-                                                                <span>View company details</span>
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="dropdown-item is-media">
-                                                            <div class="icon">
-                                                                <i class="lnil lnil-dollar-up"></i>
-                                                            </div>
-                                                            <div class="meta">
-                                                                <span>Deal</span>
-                                                                <span>Start a new deal</span>
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="dropdown-item is-media">
-                                                            <div class="icon">
-                                                                <i class="lnil lnil-calendar"></i>
-                                                            </div>
-                                                            <div class="meta">
-                                                                <span>Schedule</span>
-                                                                <span>Schedule a call</span>
-                                                            </div>
-                                                        </a>
-                                                        <hr class="dropdown-divider">
-                                                        <a href="#" class="dropdown-item is-media">
-                                                            <div class="icon">
-                                                                <i class="lnil lnil-trash-can-alt"></i>
-                                                            </div>
-                                                            <div class="meta">
-                                                                <span>Remove</span>
-                                                                <span>Remove from list</span>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!--Table item-->
-                                    <div class="flex-table-item">
-                                        <div class="flex-table-cell is-bold" data-th="Company">
-                                            <span class="dark-text">Kokolint</span>
-                                        </div>
-                                        <div class="flex-table-cell" data-th="Type">
-                                            <span class="light-text">New lead</span>
-                                        </div>
-                                        <div class="flex-table-cell" data-th="Industry">
-                                            <span class="light-text">Software</span>
-                                        </div>
-                                        <div class="flex-table-cell" data-th="Status">
-                                            <span class="tag is-success is-rounded">Active</span>
-                                        </div>
-                                        <div class="flex-table-cell" data-th="Contacts">
-                                            <div class="avatar-stack is-pushed-mobile">
-                                                <div class="h-avatar is-small">
-                                                    <span class="avatar is-fake is-success">
-                                                        <span>BT</span>
-                                                    </span>
-                                                </div>
-                                                <div class="h-avatar is-small">
-                                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/12.jpg" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex-table-cell cell-end" data-th="Actions">
-                                            <div class="dropdown is-spaced is-dots is-right dropdown-trigger is-pushed-mobile">
-                                                <div class="is-trigger" aria-haspopup="true">
-                                                    <i data-feather="more-vertical"></i>
-                                                </div>
-                                                <div class="dropdown-menu" role="menu">
-                                                    <div class="dropdown-content">
-                                                        <a href="#" class="dropdown-item is-media">
-                                                            <div class="icon">
-                                                                <i class="lnil lnil-eye"></i>
-                                                            </div>
-                                                            <div class="meta">
-                                                                <span>View</span>
-                                                                <span>View company details</span>
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="dropdown-item is-media">
-                                                            <div class="icon">
-                                                                <i class="lnil lnil-dollar-up"></i>
-                                                            </div>
-                                                            <div class="meta">
-                                                                <span>Deal</span>
-                                                                <span>Start a new deal</span>
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="dropdown-item is-media">
-                                                            <div class="icon">
-                                                                <i class="lnil lnil-calendar"></i>
-                                                            </div>
-                                                            <div class="meta">
-                                                                <span>Schedule</span>
-                                                                <span>Schedule a call</span>
-                                                            </div>
-                                                        </a>
-                                                        <hr class="dropdown-divider">
-                                                        <a href="#" class="dropdown-item is-media">
-                                                            <div class="icon">
-                                                                <i class="lnil lnil-trash-can-alt"></i>
-                                                            </div>
-                                                            <div class="meta">
-                                                                <span>Remove</span>
-                                                                <span>Remove from list</span>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!--Table item-->
-                                    <div class="flex-table-item">
-                                        <div class="flex-table-cell is-bold" data-th="Company">
-                                            <span class="dark-text">VScope X</span>
-                                        </div>
-                                        <div class="flex-table-cell" data-th="Type">
-                                            <span class="light-text">Canceled</span>
-                                        </div>
-                                        <div class="flex-table-cell" data-th="Industry">
-                                            <span class="light-text">Software</span>
-                                        </div>
-                                        <div class="flex-table-cell" data-th="Status">
-                                            <span class="tag is-rounded">Disabled</span>
-                                        </div>
-                                        <div class="flex-table-cell" data-th="Contacts">
-                                            <div class="avatar-stack is-pushed-mobile">
-                                                <div class="h-avatar is-small">
-                                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/21.jpg" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex-table-cell cell-end" data-th="Actions">
-                                            <div class="dropdown is-spaced is-dots is-right dropdown-trigger is-pushed-mobile">
-                                                <div class="is-trigger" aria-haspopup="true">
-                                                    <i data-feather="more-vertical"></i>
-                                                </div>
-                                                <div class="dropdown-menu" role="menu">
-                                                    <div class="dropdown-content">
-                                                        <a href="#" class="dropdown-item is-media">
-                                                            <div class="icon">
-                                                                <i class="lnil lnil-eye"></i>
-                                                            </div>
-                                                            <div class="meta">
-                                                                <span>View</span>
-                                                                <span>View company details</span>
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="dropdown-item is-media">
-                                                            <div class="icon">
-                                                                <i class="lnil lnil-dollar-up"></i>
-                                                            </div>
-                                                            <div class="meta">
-                                                                <span>Deal</span>
-                                                                <span>Start a new deal</span>
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="dropdown-item is-media">
-                                                            <div class="icon">
-                                                                <i class="lnil lnil-calendar"></i>
-                                                            </div>
-                                                            <div class="meta">
-                                                                <span>Schedule</span>
-                                                                <span>Schedule a call</span>
-                                                            </div>
-                                                        </a>
-                                                        <hr class="dropdown-divider">
-                                                        <a href="#" class="dropdown-item is-media">
-                                                            <div class="icon">
-                                                                <i class="lnil lnil-trash-can-alt"></i>
-                                                            </div>
-                                                            <div class="meta">
-                                                                <span>Remove</span>
-                                                                <span>Remove from list</span>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!--Table item-->
-                                    <div class="flex-table-item">
-                                        <div class="flex-table-cell is-bold" data-th="Company">
-                                            <span class="dark-text">MediHelp</span>
-                                        </div>
-                                        <div class="flex-table-cell" data-th="Type">
-                                            <span class="light-text">Confirmed</span>
-                                        </div>
-                                        <div class="flex-table-cell" data-th="Industry">
-                                            <span class="light-text">Software</span>
-                                        </div>
-                                        <div class="flex-table-cell" data-th="Status">
-                                            <span class="tag is-rounded is-danger">Suspended</span>
-                                        </div>
-                                        <div class="flex-table-cell" data-th="Contacts">
-                                            <div class="avatar-stack is-pushed-mobile">
-                                                <div class="h-avatar is-small">
-                                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/5.jpg" alt="">
-                                                </div>
-                                                <div class="h-avatar is-small">
-                                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/9.jpg" alt="">
-                                                </div>
-                                                <div class="h-avatar is-small">
-                                                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="./img/avatars/photos/11.jpg" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex-table-cell cell-end" data-th="Actions">
-                                            <div class="dropdown is-spaced is-dots is-right dropdown-trigger is-pushed-mobile">
-                                                <div class="is-trigger" aria-haspopup="true">
-                                                    <i data-feather="more-vertical"></i>
-                                                </div>
-                                                <div class="dropdown-menu" role="menu">
-                                                    <div class="dropdown-content">
-                                                        <a href="#" class="dropdown-item is-media">
-                                                            <div class="icon">
-                                                                <i class="lnil lnil-eye"></i>
-                                                            </div>
-                                                            <div class="meta">
-                                                                <span>View</span>
-                                                                <span>View company details</span>
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="dropdown-item is-media">
-                                                            <div class="icon">
-                                                                <i class="lnil lnil-dollar-up"></i>
-                                                            </div>
-                                                            <div class="meta">
-                                                                <span>Deal</span>
-                                                                <span>Start a new deal</span>
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" class="dropdown-item is-media">
-                                                            <div class="icon">
-                                                                <i class="lnil lnil-calendar"></i>
-                                                            </div>
-                                                            <div class="meta">
-                                                                <span>Schedule</span>
-                                                                <span>Schedule a call</span>
-                                                            </div>
-                                                        </a>
-                                                        <hr class="dropdown-divider">
-                                                        <a href="#" class="dropdown-item is-media">
-                                                            <div class="icon">
-                                                                <i class="lnil lnil-trash-can-alt"></i>
-                                                            </div>
-                                                            <div class="meta">
-                                                                <span>Remove</span>
-                                                                <span>Remove from list</span>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <!--Table Pagination-->
-                                <nav class="flex-pagination pagination is-rounded" aria-label="pagination">
-                                    <a class="pagination-previous">Previous</a>
-                                    <a class="pagination-next">Next</a>
-                                    <ul class="pagination-list">
-                                        <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
-                                        <li><span class="pagination-ellipsis">&hellip;</span></li>
-                                        <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
-                                        <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
-                                        <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
-                                        <li><span class="pagination-ellipsis">&hellip;</span></li>
-                                        <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
-                                    </ul>
-                                </nav>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Concatenated plugins -->
-        <script src="./js/app.js"></script>
-
-        <!-- Huro js -->
-        <script src="./js/functions.js"></script>
-        <script src="./js/main.js"></script>
-        <script src="./js/components.js"></script>
-        <script src="./js/popover.js"></script>
-        <script src="./js/widgets.js"></script>
+						<ul class="navbar-nav header-right">
+							<li class="nav-item dropdown notification_dropdown">
+								<a class="nav-link bell dz-fullscreen" href="#">
+									<svg id="icon-full" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+									<svg id="icon-minimize" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minimize"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path></svg>
+								</a>
+							</li>
+							<li class="nav-item dropdown notification_dropdown">
+								<a class="nav-link bell ai-icon" href="#" role="button" data-toggle="dropdown">
+									<svg id="icon-user" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell">
+										<path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+										<path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+									</svg>
+									<div class="pulse-css"></div>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<div id="DZ_W_Notification1" class="widget-media dz-scroll p-3" style="height:380px;">
+										<ul class="timeline">
+											<li>
+												<div class="timeline-panel">
+													<div class="media mr-2">
+														<img alt="image" width="50" src="images/avatar/1.jpg">
+													</div>
+													<div class="media-body">
+														<h6 class="mb-1">Dr sultads Send you Photo</h6>
+														<small class="d-block">29 July 2020 - 02:26 PM</small>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="timeline-panel">
+													<div class="media mr-2 media-info">
+														KG
+													</div>
+													<div class="media-body">
+														<h6 class="mb-1">Resport created successfully</h6>
+														<small class="d-block">29 July 2020 - 02:26 PM</small>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="timeline-panel">
+													<div class="media mr-2 media-success">
+														<i class="fa fa-home"></i>
+													</div>
+													<div class="media-body">
+														<h6 class="mb-1">Reminder : Treatment Time!</h6>
+														<small class="d-block">29 July 2020 - 02:26 PM</small>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="timeline-panel">
+													<div class="media mr-2">
+														<img alt="image" width="50" src="images/avatar/1.jpg">
+													</div>
+													<div class="media-body">
+														<h6 class="mb-1">Dr sultads Send you Photo</h6>
+														<small class="d-block">29 July 2020 - 02:26 PM</small>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="timeline-panel">
+													<div class="media mr-2 media-danger">
+														KG
+													</div>
+													<div class="media-body">
+														<h6 class="mb-1">Resport created successfully</h6>
+														<small class="d-block">29 July 2020 - 02:26 PM</small>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="timeline-panel">
+													<div class="media mr-2 media-primary">
+														<i class="fa fa-home"></i>
+													</div>
+													<div class="media-body">
+														<h6 class="mb-1">Reminder : Treatment Time!</h6>
+														<small class="d-block">29 July 2020 - 02:26 PM</small>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<a class="all-notification" href="#">
+										See all notifications <i class="ti-arrow-right"></i>
+									</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown header-profile">
+								<a class="nav-link" href="#" role="button" data-toggle="dropdown">
+									<img src="images/profile/pic1.jpg" width="20" alt="" />
+									<div class="header-info">
+										<span>Hey, <strong>Joshua</strong></span>
+										<small>Business Profile</small>
+									</div>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a href="app-profile.html" class="dropdown-item ai-icon">
+										<svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+										<span class="ml-2">Profile </span>
+									</a>
+									<a href="email-inbox.html" class="dropdown-item ai-icon">
+										<svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" class="text-success" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+										<span class="ml-2">Inbox </span>
+									</a>
+									<a href="page-login.html" class="dropdown-item ai-icon">
+										<svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+										<span class="ml-2">Logout </span>
+									</a>
+								</div>
+							</li>
+							<li class="nav-item right-sidebar">
+								<a class="nav-link bell ai-icon" href="#">
+									<svg id="icon-menu" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<!--**********************************
+			Header end ti-comment-alt
+		***********************************-->
+		<!--**********************************
+			Sidebar start
+		***********************************-->
+		<div class="deznav">
+			<div class="deznav-scroll">
+				<ul class="metismenu" id="menu">
+					<li class="nav-label first">Main Menu</li>
+					<li>
+						<a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24" /><rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5" /><path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z" fill="#000000" opacity="0.3" /></g></svg>
+							<span class="nav-text">Dashboard</span>
+						</a>
+						<ul aria-expanded="false">
+							<li><a href="index.html">Logs</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 
 
-        <!-- Additional Features -->
-        <script src="./js/touch.js"></script>
-        <script src="./js/syntax.js"></script>
-    </div>
+		</div>
+		<!--**********************************
+			Sidebar end
+		***********************************-->
+		<!--**********************************
+			Content body start
+		***********************************-->
+		<div class="content-body">
+			<div class="container-fluid">
+				<div class="row page-titles mx-0">
+					<div class="col-sm-6 p-md-0">
+						<div class="welcome-text">
+							<h4>Hi, welcome back!</h4>
+							<span>Log Table</span>
+						</div>
+					</div>
+					<div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="javascript:void(0)">Table</a></li>
+							<li class="breadcrumb-item active"><a href="javascript:void(0)">Log table</a></li>
+						</ol>
+					</div>
+				</div>
+				<!-- row -->
+
+
+				<div class="row">
+					<div class="col-12">
+						<div class="card">
+							<div class="card-header">
+								<h4 class="card-title">Fees Collection</h4>
+							</div>
+							<div class="card-body">
+								<div class="table-responsive">
+									<table id="example4" class="display" style="min-width: 845px">
+										<thead>
+											<tr>
+												<th>Roll No</th>
+												<th>Student Name</th>
+												<th>Invoice number</th>
+												<th>Fees Type </th>
+												<th>Payment Type </th>
+												<th>Status </th>
+												<th>Date</th>
+												<th>Amount</th>
+												<th>Action</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>01</td>
+												<td>Tiger Nixon</td>
+												<td>#54605</td>
+												<td>Library</td>
+												<td>Cash</td>
+												<td><span class="badge light badge-success">Paid</span></td>
+												<td>2011/04/25</td>
+												<td><strong>120$</strong></td>
+												<td>
+													<div class="d-flex">
+														<a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+														<a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>02</td>
+												<td>Garrett Winters</td>
+												<td>#54687</td>
+												<td>Library</td>
+												<td>Credit Card</td>
+												<td><span class="badge light badge-warning">Panding</span></td>
+												<td>2011/07/25</td>
+												<td><strong>120$</strong></td>
+												<td>
+													<div class="d-flex">
+														<a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+														<a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>03</td>
+												<td>Ashton Cox</td>
+												<td>#35672</td>
+												<td>Tuition</td>
+												<td>Cash</td>
+												<td><span class="badge light badge-success">Paid</span></td>
+												<td>2009/01/12</td>
+												<td><strong>120$</strong></td>
+												<td>
+													<div class="d-flex">
+														<a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+														<a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>04</td>
+												<td>Cedric Kelly</td>
+												<td>#57984</td>
+												<td>Annual</td>
+												<td>Credit Card</td>
+												<td><span class="badge light badge-warning">Panding</span></td>
+												<td>2012/03/29</td>
+												<td><strong>120$</strong></td>
+												<td>
+													<div class="d-flex">
+														<a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+														<a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>05</td>
+												<td>Airi Satou</td>
+												<td>#12453</td>
+												<td>Library</td>
+												<td>Cheque</td>
+												<td><span class="badge light badge-warning">Panding</span></td>
+												<td>2008/11/28</td>
+												<td><strong>120$</strong></td>
+												<td>
+													<div class="d-flex">
+														<a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+														<a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>06</td>
+												<td>Brielle Williamson</td>
+												<td>#59723</td>
+												<td>Tuition</td>
+												<td>Cash</td>
+												<td><span class="badge light badge-success">Paid</span></td>
+												<td>2012/12/02</td>
+												<td><strong>120$</strong></td>
+												<td>
+													<div class="d-flex">
+														<a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+														<a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>07</td>
+												<td>Herrod Chandler</td>
+												<td>#98726</td>
+												<td>Tuition</td>
+												<td>Credit Card</td>
+												<td><span class="badge light badge-danger">Udpaid</span></td>
+												<td>2012/08/06</td>
+												<td><strong>120$</strong></td>
+												<td>
+													<div class="d-flex">
+														<a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+														<a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+													</div>
+												</td>
+											</tr>										
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--**********************************
+			Content body end
+		***********************************-->
+		<!--**********************************
+			Footer start
+		***********************************-->
+		<div class="footer">
+			<div class="copyright">
+				<p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/" target="_blank">DexignZone</a> 2020</p>
+			</div>
+		</div>
+		<!--**********************************
+			Footer end
+		***********************************-->
+		<!--**********************************
+		   Support ticket button start
+		***********************************-->
+		<!--**********************************
+		   Support ticket button end
+		***********************************-->
+
+
+	</div>
+	<!--**********************************
+		Main wrapper end
+	***********************************-->
+	<!--**********************************
+		Scripts
+	***********************************-->
+	<!-- Required vendors -->
+	<script src="./js/global.min.js"></script>
+	<script src="./js/custom.min.js"></script>
+	<script src="js/deznav-init.js"></script>
+
+	<!-- Dashboard 1 -->
+	<!--<script src="./js/dashboard/dashboard-1.js"></script>-->
+	<!--Datatable-->
+	<script src="./js/jquery.dataTables.min.js"></script>
+	<script src="./js/datatables.init.js"></script>
+
+	<!-- Svganimation scripts -->
+	<script src="./vendor/svganimation/vivus.min.js"></script>
+	<script src="./vendor/svganimation/svg.animation.js"></script>
+
+	<script>
+		(function ($) {
+			"use strict"
+
+			var direction = getUrlParams('dir');
+			if (direction != 'rtl') { direction = 'ltr'; }
+
+			new dezSettings({
+				typography: "roboto",
+				version: "light",
+				layout: "vertical",
+				headerBg: "color_1",
+				navheaderBg: "color_3",
+				sidebarBg: "color_1",
+				sidebarStyle: "full",
+				sidebarPosition: "fixed",
+				headerPosition: "fixed",
+				containerLayout: "wide",
+				direction: direction
+			});
+
+		})(jQuery);
+	</script>
+
 </body>
 </html>

@@ -46,7 +46,7 @@ namespace TestLog
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TestLog v1"));
             }
 
-            //app.UseEazyLoggerUi();
+            app.UseEazyLoggerUi();
 
             app.UseHttpsRedirection();
 

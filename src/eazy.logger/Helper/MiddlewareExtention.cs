@@ -23,10 +23,10 @@ namespace eazy.logger.Helper
     public class MiddlewareExtention
     {
         private const string EmbeddedFileNamespace = "eazy.logger.wwwroot.dist";
-        private readonly UiOptions _options;
-        private readonly StaticFileMiddleware _staticFileMiddleware;
         private readonly JsonSerializerSettings _jsonSerializerOptions;
         private readonly ILogger<MiddlewareExtention> _logger;
+        private readonly UiOptions _options;
+        private readonly StaticFileMiddleware _staticFileMiddleware;
 
         public MiddlewareExtention(
             RequestDelegate next,
@@ -34,7 +34,7 @@ namespace eazy.logger.Helper
             ILoggerFactory loggerFactory,
             UiOptions options,
             ILogger<MiddlewareExtention> logger
-            )
+        )
         {
             _options = options;
             _logger = logger;
@@ -47,6 +47,9 @@ namespace eazy.logger.Helper
             };
         }
 
+        private Func<Stream> IndexStream { get; } =
+            () => Assembly.GetExecutingAssembly().GetManifestResourceStream("eazy.logger.wwwroot.index.html");
+
 
         public async Task Invoke(HttpContext httpContext)
         {
@@ -54,39 +57,42 @@ namespace eazy.logger.Helper
             var path = httpContext.Request.Path.Value;
 
             // If the RoutePrefix is requested (with or without trailing slash), redirect to index URL
-            if (httpMethod == "GET" && Regex.IsMatch(path, $"^/{Regex.Escape(_options.RoutePrefix)}/api/logs/?$", RegexOptions.IgnoreCase))
+            if (httpMethod == "GET" && Regex.IsMatch(path, $"^/{Regex.Escape(_options.RoutePrefix)}/api/logs/?$",
+                RegexOptions.IgnoreCase))
             {
                 try
                 {
                     httpContext.Response.ContentType = "application/json;charset=utf-8";
 
                     var result = await FetchLogsAsync(httpContext);
-                    httpContext.Response.StatusCode = (int)HttpStatusCode.OK;
+                    httpContext.Response.StatusCode = (int) HttpStatusCode.OK;
                     await httpContext.Response.WriteAsync(result);
                 }
                 catch (Exception ex)
                 {
                     _logger.LogError(ex, ex.Message);
-                    httpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                    httpContext.Response.StatusCode = (int) HttpStatusCode.InternalServerError;
 
                     var errorMessage = httpContext.Request.IsLocal()
-                        ? JsonConvert.SerializeObject(new { errorMessage = ex.Message })
-                        : JsonConvert.SerializeObject(new { errorMessage = "Internal server error" });
+                        ? JsonConvert.SerializeObject(new {errorMessage = ex.Message})
+                        : JsonConvert.SerializeObject(new {errorMessage = "Internal server error"});
 
-                    await httpContext.Response.WriteAsync(JsonConvert.SerializeObject(new { errorMessage }));
+                    await httpContext.Response.WriteAsync(JsonConvert.SerializeObject(new {errorMessage}));
                 }
 
                 return;
             }
 
-            if (httpMethod == "GET" && Regex.IsMatch(path, $"^/?{Regex.Escape(_options.RoutePrefix)}/?$", RegexOptions.IgnoreCase))
+            if (httpMethod == "GET" &&
+                Regex.IsMatch(path, $"^/?{Regex.Escape(_options.RoutePrefix)}/?$", RegexOptions.IgnoreCase))
             {
                 var indexUrl = httpContext.Request.GetEncodedUrl().TrimEnd('/') + "/index.html";
                 RespondWithRedirect(httpContext.Response, indexUrl);
                 return;
             }
 
-            if (httpMethod == "GET" && Regex.IsMatch(path, $"^/{Regex.Escape(_options.RoutePrefix)}/?index.html$", RegexOptions.IgnoreCase))
+            if (httpMethod == "GET" && Regex.IsMatch(path, $"^/{Regex.Escape(_options.RoutePrefix)}/?index.html$",
+                RegexOptions.IgnoreCase))
             {
                 await RespondWithIndexHtml(httpContext.Response);
                 return;
@@ -104,7 +110,8 @@ namespace eazy.logger.Helper
             var staticFileOptions = new StaticFileOptions
             {
                 RequestPath = $"/{_options.RoutePrefix}",
-                FileProvider = new EmbeddedFileProvider(typeof(MiddlewareExtention).GetTypeInfo().Assembly, EmbeddedFileNamespace),
+                FileProvider = new EmbeddedFileProvider(typeof(MiddlewareExtention).GetTypeInfo().Assembly,
+                    EmbeddedFileNamespace)
             };
 
             return new StaticFileMiddleware(next, hostingEnv, Options.Create(staticFileOptions), loggerFactory);
@@ -125,13 +132,10 @@ namespace eazy.logger.Helper
             await using var stream = IndexStream();
             var htmlBuilder = new StringBuilder(await new StreamReader(stream).ReadToEndAsync());
             htmlBuilder.Replace("%(Configs)", JsonConvert.SerializeObject(
-                new { _options.RoutePrefix, _options.AuthType }, _jsonSerializerOptions));
+                new {_options.RoutePrefix, _options.AuthType}, _jsonSerializerOptions));
 
             await response.WriteAsync(htmlBuilder.ToString(), Encoding.UTF8);
         }
-
-        private Func<Stream> IndexStream { get; } =
-            () => Assembly.GetExecutingAssembly().GetManifestResourceStream("eazy.logger.wwwroot.index.html");
 
         private async Task<string> FetchLogsAsync(HttpContext httpContext)
         {
@@ -149,7 +153,7 @@ namespace eazy.logger.Helper
             var (logs, total) = await provider.FetchDataAsync(currentPage, count, levelStr, searchStr);
 
             //var result = JsonSerializer.Serialize(logs, _jsonSerializerOptions);
-            var result = JsonConvert.SerializeObject(new { logs, total, count, currentPage }, _jsonSerializerOptions);
+            var result = JsonConvert.SerializeObject(new {logs, total, count, currentPage}, _jsonSerializerOptions);
             return result;
         }
     }

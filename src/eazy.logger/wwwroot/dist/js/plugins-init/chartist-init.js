@@ -174,7 +174,7 @@
 				return data;
 			  }, {
 				labels: [],
-				series: times(4).map(function() { return new Array() })
+				series: times(4).map(function() { return [] })
 			  });
 			  
 			  var options = {

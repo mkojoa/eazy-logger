@@ -1,8 +1,6 @@
-﻿using eazy.logger.EfCore.Entity;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using eazy.logger.EfCore.Entity;
 
 namespace eazy.logger.EfCore
 {

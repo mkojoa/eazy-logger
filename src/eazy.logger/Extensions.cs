@@ -16,9 +16,9 @@ namespace eazy.logger
 {
     public static class Extensions
     {
-        public static IHostBuilder UseEazyLogging(this IHostBuilder hostBuilder, 
-            Action<LoggerConfiguration> configure = null) 
-        { 
+        public static IHostBuilder UseEazyLogging(this IHostBuilder hostBuilder,
+            Action<LoggerConfiguration> configure = null)
+        {
             return hostBuilder.UseSerilog((context, loggerConfig) =>
             {
                 var options = new LoggerOptions();
@@ -73,7 +73,7 @@ namespace eazy.logger
 
                     loggerConfig.WriteTo.File(path, rollingInterval: interval);
                 }
-                
+
                 // check if seq option is enabled
                 if (seqOptions.Enabled)
                     loggerConfig.WriteTo.Seq(seqOptions.Url, apiKey: seqOptions.ApiKey);
@@ -82,18 +82,19 @@ namespace eazy.logger
                 // check if database option is enabled
                 if (databaseOptions.Enabled)
                     loggerConfig.WriteTo.MSSqlServer(
-                        connectionString: $"Server={databaseOptions.Instance};" +
-                                          $"Database={databaseOptions.Name};" +
-                                          $"Integrated Security={databaseOptions.IntegratedSecurity};" +
-                                          $"User ID={databaseOptions.UserName};" +
-                                          $"Password={databaseOptions.Password}",
-                        sinkOptions: new MSSqlServerSinkOptions { TableName = $"{databaseOptions.Table}", AutoCreateSqlTable= true }
-                        );
+                        $"Server={databaseOptions.Instance};" +
+                        $"Database={databaseOptions.Name};" +
+                        $"Integrated Security={databaseOptions.IntegratedSecurity};" +
+                        $"User ID={databaseOptions.UserName};" +
+                        $"Password={databaseOptions.Password}",
+                        new MSSqlServerSinkOptions {TableName = $"{databaseOptions.Table}", AutoCreateSqlTable = true}
+                    );
             });
         }
-        
-        public static IApplicationBuilder UseEazyLoggerUi(this IApplicationBuilder applicationBuilder, Action<UiOptions> options = null)
-        { 
+
+        public static IApplicationBuilder UseEazyLoggerUi(this IApplicationBuilder applicationBuilder,
+            Action<UiOptions> options = null)
+        {
             if (applicationBuilder == null)
                 throw new ArgumentNullException(nameof(applicationBuilder));
 

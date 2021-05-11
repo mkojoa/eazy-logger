@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace eazy.logger.EfCore.Entity
 {
@@ -21,7 +19,7 @@ namespace eazy.logger.EfCore.Entity
         public virtual string PropertyType { get; set; }
     }
 
-    
+
     internal abstract class SqlServerLogModel : LogModel
     {
         public override string PropertyType => "xml";

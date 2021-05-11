@@ -1,14 +1,12 @@
-﻿using Dapper;
+﻿using System.Collections.Generic;
+using System.Data;
+using System.Text;
+using System.Threading.Tasks;
+using Dapper;
 using eazy.logger.EfCore.Entity;
 using eazy.logger.Logging;
 using eazy.logger.Logging.Options;
 using Microsoft.Data.SqlClient;
-using System.Collections.Generic;
-using System.Data;
-using System.Text;
-using System.Threading.Tasks;
-
-
 
 namespace eazy.logger.EfCore.Repo
 {
@@ -23,7 +21,7 @@ namespace eazy.logger.EfCore.Repo
 
         public async Task<(IEnumerable<LogModel>, int)> FetchDataAsync(
             int page, int count, string level = null, string searchCriteria = null
-            )
+        )
         {
             var logsTask = GetLogsAsync(page - 1, count, level, searchCriteria);
             var logCountTask = CountLogsAsync(level, searchCriteria);
@@ -51,11 +49,9 @@ namespace eazy.logger.EfCore.Repo
             }
 
             if (!string.IsNullOrEmpty(searchCriteria))
-            {
                 queryBuilder.Append(whereIncluded
                     ? "AND [Message] LIKE @Search OR [Exception] LIKE @Search "
                     : "WHERE [Message] LIKE @Search OR [Exception] LIKE @Search ");
-            }
 
             queryBuilder.Append("ORDER BY Id DESC OFFSET @Offset ROWS FETCH NEXT @Count ROWS ONLY");
 
@@ -68,7 +64,7 @@ namespace eazy.logger.EfCore.Repo
                             $"Encrypt={_options.Encrypt};" +
                             $"TrustServerCertificate={_options.TrustServerCertificate}";
             using IDbConnection connection = new SqlConnection(fullConec);
-        
+
 
             var logs = await connection.QueryAsync<SqlServerLogModel>(queryBuilder.ToString(),
                 new
@@ -81,7 +77,7 @@ namespace eazy.logger.EfCore.Repo
 
             var index = 1;
             foreach (var log in logs)
-                log.RowNo = (page * count) + index++;
+                log.RowNo = page * count + index++;
 
             return logs;
         }
@@ -104,11 +100,9 @@ namespace eazy.logger.EfCore.Repo
             }
 
             if (!string.IsNullOrEmpty(searchCriteria))
-            {
                 queryBuilder.Append(whereIncluded
                     ? "AND [Message] LIKE @Search OR [Exception] LIKE @Search "
                     : "WHERE [Message] LIKE @Search OR [Exception] LIKE @Search ");
-            }
 
             var fullConec = "" +
                             $"Server={_options.Instance};" +
@@ -132,7 +126,7 @@ namespace eazy.logger.EfCore.Repo
         public void ProgramaticallyCreateTable(string fullConec)
         {
             var queryBuilder = new StringBuilder();
-            SqlConnection myConn = new SqlConnection(fullConec);
+            var myConn = new SqlConnection(fullConec);
 
             queryBuilder.Append("IF NOT EXISTS(SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[");
             queryBuilder.Append("dbo");
@@ -156,26 +150,20 @@ namespace eazy.logger.EfCore.Repo
             queryBuilder.Append("[LogEvent] [nvarchar](max)NULL,");
             queryBuilder.Append("CONSTRAINT[PK_Logs] PRIMARY KEY CLUSTERED");
             queryBuilder.Append("([Id] ASC)");
-            queryBuilder.Append("WITH(PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON[PRIMARY]");
+            queryBuilder.Append(
+                "WITH(PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON[PRIMARY]");
             queryBuilder.Append(") ON[PRIMARY] TEXTIMAGE_ON[PRIMARY]");
             queryBuilder.Append("END");
 
-            SqlCommand myCommand = new SqlCommand(queryBuilder.ToString(), myConn);
+            var myCommand = new SqlCommand(queryBuilder.ToString(), myConn);
             try
             {
                 myConn.Open();
                 myCommand.ExecuteNonQuery();
             }
-            catch (System.Exception ex)
-            {
-                throw;
-            }
             finally
             {
-                if (myConn.State == ConnectionState.Open)
-                {
-                    myConn.Close();
-                }
+                if (myConn.State == ConnectionState.Open) myConn.Close();
             }
         }
     }

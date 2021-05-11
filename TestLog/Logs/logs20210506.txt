@@ -1,0 +1,111 @@
+2021-05-06 09:20:29.126 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-05-06 09:20:30.685 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/index.html - -
+2021-05-06 09:20:30.893 +00:00 [INF] Hosting environment: Development
+2021-05-06 09:20:30.893 +00:00 [INF] Content root path: C:\Users\MAmeyaw\RiderProjects\eazy-logger\TestLog
+2021-05-06 09:20:32.266 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/index.html - - - 200 - text/html;charset=utf-8 1583.2511ms
+2021-05-06 09:20:33.581 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - -
+2021-05-06 09:20:34.106 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 524.5711ms
+2021-05-06 09:20:35.236 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44357/swagger/swagger-ui-standalone-preset.js.map - -
+2021-05-06 09:20:35.237 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44357/swagger/swagger-ui-bundle.js.map - -
+2021-05-06 09:20:35.560 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:44357/swagger/swagger-ui-bundle.js.map - - - 404 - - 323.2838ms
+2021-05-06 09:20:35.560 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:44357/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 323.8131ms
+2021-05-06 09:21:34.634 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-05-06 09:21:34.731 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/index.html - -
+2021-05-06 09:21:34.780 +00:00 [INF] Hosting environment: Development
+2021-05-06 09:21:34.780 +00:00 [INF] Content root path: C:\Users\MAmeyaw\RiderProjects\eazy-logger\TestLog
+2021-05-06 09:21:34.944 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/index.html - - - 200 - text/html;charset=utf-8 215.6983ms
+2021-05-06 09:21:35.079 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - -
+2021-05-06 09:21:35.167 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 87.9550ms
+2021-05-06 09:21:35.211 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44357/swagger/swagger-ui-standalone-preset.js.map - -
+2021-05-06 09:21:35.213 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44357/swagger/swagger-ui-bundle.js.map - -
+2021-05-06 09:21:35.258 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:44357/swagger/swagger-ui-standalone-preset.js.map - - - 404 - - 47.0857ms
+2021-05-06 09:21:35.259 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:44357/swagger/swagger-ui-bundle.js.map - - - 404 - - 46.4251ms
+2021-05-06 09:21:43.037 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/swagger-ui.css - -
+2021-05-06 09:21:43.038 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/swagger-ui-bundle.js - -
+2021-05-06 09:21:43.124 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/swagger-ui-standalone-preset.js - -
+2021-05-06 09:21:43.229 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-05-06 09:21:43.229 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-05-06 09:21:43.229 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-05-06 09:21:43.233 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/swagger-ui.css - - - 200 142933 text/css 195.6397ms
+2021-05-06 09:21:43.238 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 113.6794ms
+2021-05-06 09:21:43.269 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 231.0716ms
+2021-05-06 09:21:43.699 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - -
+2021-05-06 09:21:43.725 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 25.6579ms
+2021-05-06 09:21:49.410 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger - -
+2021-05-06 09:21:49.445 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/index.html - -
+2021-05-06 09:21:49.637 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger - - - 301 - - 226.4892ms
+2021-05-06 09:21:49.954 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/index.html - - - 200 - text/html;charset=utf-8 508.6107ms
+2021-05-06 09:21:50.052 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/css/bootstrap-select.min.css - -
+2021-05-06 09:21:50.057 +00:00 [INF] Sending file. Request path: '/css/bootstrap-select.min.css'. Physical path: 'N/A'
+2021-05-06 09:21:50.058 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/vendor/jqvmap/css/jqvmap.min.css - -
+2021-05-06 09:21:50.060 +00:00 [INF] Sending file. Request path: '/vendor/jqvmap/css/jqvmap.min.css'. Physical path: 'N/A'
+2021-05-06 09:21:50.061 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/css/bootstrap-select.min.css - - - 200 10722 text/css 15.6301ms
+2021-05-06 09:21:50.062 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/vendor/jqvmap/css/jqvmap.min.css - - - 200 614 text/css 4.5859ms
+2021-05-06 09:21:50.062 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/css/font-awesome.min.css - -
+2021-05-06 09:21:50.063 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/css/style.css - -
+2021-05-06 09:21:50.066 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/css/LineIcons.css - -
+2021-05-06 09:21:50.066 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/js/custom.min.js - -
+2021-05-06 09:21:50.066 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/js/deznav-init.js - -
+2021-05-06 09:21:50.072 +00:00 [INF] Sending file. Request path: '/css/font-awesome.min.css'. Physical path: 'N/A'
+2021-05-06 09:21:50.073 +00:00 [INF] Sending file. Request path: '/js/deznav-init.js'. Physical path: 'N/A'
+2021-05-06 09:21:50.072 +00:00 [INF] Sending file. Request path: '/js/custom.min.js'. Physical path: 'N/A'
+2021-05-06 09:21:50.074 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/js/global.min.js - -
+2021-05-06 09:21:50.075 +00:00 [INF] Sending file. Request path: '/css/LineIcons.css'. Physical path: 'N/A'
+2021-05-06 09:21:50.075 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/js/deznav-init.js - - - 200 570 application/javascript 9.2626ms
+2021-05-06 09:21:50.080 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/css/jquery.dataTables.min.css - -
+2021-05-06 09:21:50.081 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/images/profile/pic1.jpg - -
+2021-05-06 09:21:50.082 +00:00 [INF] Sending file. Request path: '/images/profile/pic1.jpg'. Physical path: 'N/A'
+2021-05-06 09:21:50.100 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/js/datatables.init.js - -
+2021-05-06 09:21:50.108 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/vendor/svganimation/svg.animation.js - -
+2021-05-06 09:21:50.108 +00:00 [INF] Sending file. Request path: '/js/datatables.init.js'. Physical path: 'N/A'
+2021-05-06 09:21:50.109 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/images/logo-text-white.png - -
+2021-05-06 09:21:50.109 +00:00 [INF] Sending file. Request path: '/vendor/svganimation/svg.animation.js'. Physical path: 'N/A'
+2021-05-06 09:21:50.109 +00:00 [INF] Sending file. Request path: '/images/logo-text-white.png'. Physical path: 'N/A'
+2021-05-06 09:21:50.082 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/js/jquery.dataTables.min.js - -
+2021-05-06 09:21:50.110 +00:00 [INF] Sending file. Request path: '/css/jquery.dataTables.min.css'. Physical path: 'N/A'
+2021-05-06 09:21:50.112 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/images/avatar/1.jpg - -
+2021-05-06 09:21:50.113 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/images/avatar/2.jpg - -
+2021-05-06 09:21:50.114 +00:00 [INF] Sending file. Request path: '/images/avatar/1.jpg'. Physical path: 'N/A'
+2021-05-06 09:21:50.113 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/vendor/svganimation/svg.animation.js - - - 200 699 application/javascript 4.6054ms
+2021-05-06 09:21:50.113 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/images/logo-text-white.png - - - 200 827 image/png 3.9109ms
+2021-05-06 09:21:50.115 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/js/custom.min.js - - - 200 11152 application/javascript 48.9126ms
+2021-05-06 09:21:50.115 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/css/font-awesome.min.css - - - 200 31034 text/css 52.4011ms
+2021-05-06 09:21:50.115 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/css/LineIcons.css - - - 200 22357 text/css 49.0531ms
+2021-05-06 09:21:50.115 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/images/avatar/4.jpg - -
+2021-05-06 09:21:50.115 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/js/datatables.init.js - - - 200 4883 application/javascript 15.2762ms
+2021-05-06 09:21:50.115 +00:00 [INF] Sending file. Request path: '/images/avatar/2.jpg'. Physical path: 'N/A'
+2021-05-06 09:21:50.113 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/images/avatar/3.jpg - -
+2021-05-06 09:21:50.116 +00:00 [INF] Sending file. Request path: '/images/avatar/4.jpg'. Physical path: 'N/A'
+2021-05-06 09:21:50.116 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/css/jquery.dataTables.min.css - - - 200 13901 text/css 35.9018ms
+2021-05-06 09:21:50.115 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/images/profile/pic1.jpg - - - 200 2582 image/jpeg 34.4535ms
+2021-05-06 09:21:50.115 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/images/avatar/5.jpg - -
+2021-05-06 09:21:50.117 +00:00 [INF] Sending file. Request path: '/images/avatar/3.jpg'. Physical path: 'N/A'
+2021-05-06 09:21:50.117 +00:00 [INF] Sending file. Request path: '/images/avatar/5.jpg'. Physical path: 'N/A'
+2021-05-06 09:21:50.117 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/images/avatar/5.jpg - - - 200 4607 image/jpeg 2.3610ms
+2021-05-06 09:21:50.118 +00:00 [INF] Sending file. Request path: '/js/global.min.js'. Physical path: 'N/A'
+2021-05-06 09:21:50.124 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/images/avatar/4.jpg - - - 200 4429 image/jpeg 8.6369ms
+2021-05-06 09:21:50.124 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/images/avatar/1.jpg - - - 200 4402 image/jpeg 11.6423ms
+2021-05-06 09:21:50.124 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/images/avatar/2.jpg - - - 200 4863 image/jpeg 10.9458ms
+2021-05-06 09:21:50.124 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/images/avatar/3.jpg - - - 200 3923 image/jpeg 11.3357ms
+2021-05-06 09:21:50.125 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/images/logo-white.png - -
+2021-05-06 09:21:50.125 +00:00 [INF] Sending file. Request path: '/images/logo-white.png'. Physical path: 'N/A'
+2021-05-06 09:21:50.132 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/images/logo-white.png - - - 200 1091 image/png 5.4019ms
+2021-05-06 09:21:50.132 +00:00 [INF] Sending file. Request path: '/js/jquery.dataTables.min.js'. Physical path: 'N/A'
+2021-05-06 09:21:50.134 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/vendor/svganimation/vivus.min.js - -
+2021-05-06 09:21:50.134 +00:00 [INF] Sending file. Request path: '/css/style.css'. Physical path: 'N/A'
+2021-05-06 09:21:50.134 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/js/global.min.js - - - 200 217605 application/javascript 60.0699ms
+2021-05-06 09:21:50.135 +00:00 [INF] Sending file. Request path: '/vendor/svganimation/vivus.min.js'. Physical path: 'N/A'
+2021-05-06 09:21:50.135 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/js/jquery.dataTables.min.js - - - 200 82567 application/javascript 52.6446ms
+2021-05-06 09:21:50.137 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/vendor/svganimation/vivus.min.js - - - 200 10668 application/javascript 3.0242ms
+2021-05-06 09:21:50.147 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/css/style.css - - - 200 1014967 text/css 84.0611ms
+2021-05-06 09:21:50.983 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/css/fonts/fontawesome-webfont3e6e3e6e.woff2?v=4.7.0 - -
+2021-05-06 09:21:50.988 +00:00 [INF] Sending file. Request path: '/css/fonts/fontawesome-webfont3e6e3e6e.woff2'. Physical path: 'N/A'
+2021-05-06 09:21:50.989 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/css/fonts/fontawesome-webfont3e6e3e6e.woff2?v=4.7.0 - - - 200 77160 font/woff2 5.2241ms
+2021-05-06 09:21:51.136 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/images/sort_both.png - -
+2021-05-06 09:21:51.137 +00:00 [INF] Sending file. Request path: '/images/sort_both.png'. Physical path: 'N/A'
+2021-05-06 09:21:51.137 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/images/sort_both.png - - - 200 1081 image/png 1.1342ms
+2021-05-06 09:21:51.200 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44357/eazy-logger/images/sort_asc.png - -
+2021-05-06 09:21:51.201 +00:00 [INF] Sending file. Request path: '/images/sort_asc.png'. Physical path: 'N/A'
+2021-05-06 09:21:51.201 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44357/eazy-logger/images/sort_asc.png - - - 200 2899 image/png 1.4463ms
+2021-05-06 09:21:51.296 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44357/eazy-logger/js/metisMenu.min.js.map - -
+2021-05-06 09:21:51.312 +00:00 [INF] Request finished HTTP/1.1 GET https://localhost:44357/eazy-logger/js/metisMenu.min.js.map - - - 404 - - 14.7593ms
